@@ -1,6 +1,6 @@
 <?php
 require_once("../../conexao.php");
-$pagina = 'missoes_recebidas';
+$pagina = 'ofertas_missa';
 $id = @$_POST['id-excluir'];
 
 require_once("../verificar-tesoureiro.php");

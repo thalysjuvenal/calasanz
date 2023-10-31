@@ -183,17 +183,17 @@ if ($pag == "") {
 
 						<li><a class="dropdown-item" href="index.php?pag=dizimos">Dízimos</a></li>
 
-						<li><a class="dropdown-item" href="index.php?pag=ofertas">Ofertas</a></li>
+						<li><a class="dropdown-item" href="index.php?pag=ofertas_missa">Ofertas</a></li>
 
-						<li><a class="dropdown-item" href="index.php?pag=missoes_recebidas">Ofertas Missões
-								Recebidas</a></li>
+						<!--<li><a class="dropdown-item" href="index.php?pag=missoes_recebidas">Ofertas Missões
+								Recebidas</a></li>-->
 
-						<li><a class="dropdown-item" href="index.php?pag=missoes_enviadas">Ofertas Missões Enviadas</a>
-						</li>
+						<!--<li><a class="dropdown-item" href="index.php?pag=missoes_enviadas">Ofertas Missões Enviadas</a>
+						</li>-->
 
 						<li><a class="dropdown-item" href="index.php?pag=doacoes">Doações</a></li>
 
-						<li><a class="dropdown-item" href="index.php?pag=vendas">Vendas</a></li>
+						<!--<li><a class="dropdown-item" href="index.php?pag=vendas">Vendas</a></li>-->
 
 						<li><a class="dropdown-item" href="index.php?pag=movimentacoes">Movimentações</a></li>
 

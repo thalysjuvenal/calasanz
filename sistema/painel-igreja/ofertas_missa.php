@@ -1,7 +1,7 @@
 <?php 
 require_once("../conexao.php");
 require_once("verificar.php");
-$pagina = 'missoes_recebidas';
+$pagina = 'ofertas_missa';
 require_once("deslogar-secretario.php");
 ?>
 
@@ -25,7 +25,7 @@ require_once("deslogar-secretario.php");
 					<th>Valor</th>
 					<th class="">Descrição</th>
 					<th class="esc">Data</th>	
-					<th class="esc">Tesoureiro / Pastor</th>	
+					<th class="esc">Tesoureiro</th>	
 					
 					<th>Ações</th>
 				</tr>		
