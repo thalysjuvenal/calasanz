@@ -299,7 +299,7 @@ $totalAniversariantes = $total_reg + $total_reg_pastores;
 			</div>
 
 
-			<div class="col-xl-3 col-sm-6 col-12 mb-2 linkcard <?php echo $esc_tesoureiro ?>"> 
+			<!--<div class="col-xl-3 col-sm-6 col-12 mb-2 linkcard <?php echo $esc_tesoureiro ?>"> 
 				<a href="index.php?pag=grupos">
 					<div class="card">
 						<div class="card-content">
@@ -317,10 +317,10 @@ $totalAniversariantes = $total_reg + $total_reg_pastores;
 						</div>
 					</div>
 				</a>
-			</div>
+			</div>-->
 
 
-			<div class="col-xl-3 col-sm-6 col-12 mb-2 linkcard <?php echo $esc_tesoureiro ?>"> 
+			<!--<div class="col-xl-3 col-sm-6 col-12 mb-2 linkcard <?php echo $esc_tesoureiro ?>"> 
 				<a href="index.php?pag=celulas">
 					<div class="card">
 						<div class="card-content">
@@ -338,11 +338,11 @@ $totalAniversariantes = $total_reg + $total_reg_pastores;
 						</div>
 					</div>
 				</a>
-			</div>
+			</div>-->
 
 
 
-			<div class="col-xl-3 col-sm-6 col-12 mb-2 linkcard <?php echo $esc_tesoureiro ?> <?php echo $esc_pastor ?>"> 
+			<!--<div class="col-xl-3 col-sm-6 col-12 mb-2 linkcard <?php echo $esc_tesoureiro ?> <?php echo $esc_pastor ?>"> 
 				<a href="index.php?pag=patrimonios">
 					<div class="card">
 						<div class="card-content">
@@ -360,12 +360,12 @@ $totalAniversariantes = $total_reg + $total_reg_pastores;
 						</div>
 					</div>
 				</a>
-			</div>
+			</div>-->
 
 
 
 
-			<div class="col-xl-3 col-sm-6 col-12 mb-2 linkcard <?php echo $esc_pastor ?> <?php echo $esc_secretario ?>"> 
+			<!--<div class="col-xl-3 col-sm-6 col-12 mb-2 linkcard <?php echo $esc_pastor ?> <?php echo $esc_secretario ?>"> 
 				<a href="index.php?pag=pagar">
 					<div class="card">
 						<div class="card-content">
@@ -383,10 +383,10 @@ $totalAniversariantes = $total_reg + $total_reg_pastores;
 						</div>
 					</div>
 				</a>
-			</div>
+			</div>-->
 
 
-			<div class="col-xl-3 col-sm-6 col-12 mb-2 linkcard <?php echo $esc_pastor ?> <?php echo $esc_secretario ?>"> 
+			<!--<div class="col-xl-3 col-sm-6 col-12 mb-2 linkcard <?php echo $esc_pastor ?> <?php echo $esc_secretario ?>"> 
 				<a href="index.php?pag=receber">
 					<div class="card">
 						<div class="card-content">
@@ -404,10 +404,10 @@ $totalAniversariantes = $total_reg + $total_reg_pastores;
 						</div>
 					</div>
 				</a>
-			</div>
+			</div>-->
 
 
-			<div class="col-xl-3 col-sm-6 col-12 mb-2 linkcard <?php echo $esc_pastor ?> <?php echo $esc_secretario ?>"> 
+			<!--<div class="col-xl-3 col-sm-6 col-12 mb-2 linkcard <?php echo $esc_pastor ?> <?php echo $esc_secretario ?>"> 
 				<a href="index.php?pag=pagar">
 					<div class="card">
 						<div class="card-content">
@@ -425,7 +425,7 @@ $totalAniversariantes = $total_reg + $total_reg_pastores;
 						</div>
 					</div>
 				</a>
-			</div>
+			</div>-->
 
 			<div class="<?php echo $esc_tesoureiro ?> <?php echo $esc_secretario ?>" align="right"><a href="index.php?mostrar=<?php echo $mostrar ?>" class="text-dark"><i class="bi <?php echo $icone_plus ?>"></i></a></div>
 
