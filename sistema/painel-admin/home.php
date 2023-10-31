@@ -69,7 +69,7 @@ $pdo->query("DELETE FROM logs where data < '$data_limpeza'");
 
 
 			<div class="col-xl-3 col-sm-6 col-12 linkcard">
-				<a href="index.php?pag=pastores">
+				<a href="index.php?pag=coordenadores">
 					<div class="card">
 						<div class="card-content">
 							<div class="card-body">
