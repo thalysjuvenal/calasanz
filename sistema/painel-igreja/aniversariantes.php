@@ -220,7 +220,7 @@ if(@$_GET['filtrar'] == "dia"){
 						<td>
 							<big>
 							
-							<a href="#" onclick="dados('<?php echo $nome ?>', '<?php echo $cpf ?>', '<?php echo $email ?>', '<?php echo $telefone ?>', '<?php echo $endereco ?>', '<?php echo $foto ?>', '<?php echo $data_nascF ?>', '<?php echo $data_cadF ?>', '<?php echo $nome_ig ?>', 'Não Lançado', 'Pastor')" title="Ver Dados">	<i class="bi bi-info-square-fill text-primary"></i> </a>
+							<a href="#" onclick="dados('<?php echo $nome ?>', '<?php echo $cpf ?>', '<?php echo $email ?>', '<?php echo $telefone ?>', '<?php echo $endereco ?>', '<?php echo $foto ?>', '<?php echo $data_nascF ?>', '<?php echo $data_cadF ?>', '<?php echo $nome_ig ?>', 'Não Lançado', 'Coordenador')" title="Ver Dados">	<i class="bi bi-info-square-fill text-primary"></i> </a>
 
 
 							<a class="<?php echo $classe_whats ?>" target="_blank" href="http://api.whatsapp.com/send?1=pt_BR&phone=55<?php echo $telefone ?>&text=Ola <?php echo $nome ?>, nos da <?php echo $nome_ig ?> desejamos a você um feliz aniversário, que Deus te abençoe e te ilumine.." title="Enviar Felicitações">

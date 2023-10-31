@@ -42,7 +42,7 @@ if($id == "" || $id == "0"){
 		$foto = 'sem-foto.jpg';
 	}
 
-	$query = $pdo->prepare("INSERT INTO pastores SET nome = :nome, email = :email, cpf = :cpf, telefone = :telefone, endereco = :endereco, foto = '$foto', data_nasc = '$data_nasc', data_cad = curDate(), igreja = '$igreja'");
+	$query = $pdo->prepare("INSERT INTO coordenadores SET nome = :nome, email = :email, cpf = :cpf, telefone = :telefone, endereco = :endereco, foto = '$foto', data_nasc = '$data_nasc', data_cad = curDate(), igreja = '$igreja'");
 
 	$query->bindValue(":nome", "$nome");
 	$query->bindValue(":email", "$email");
@@ -53,7 +53,7 @@ if($id == "" || $id == "0"){
 
 	$ult_id = $pdo->lastInsertId();
 
-	$query = $pdo->prepare("INSERT INTO usuarios SET nome = :nome, email = :email, cpf = :cpf, senha = '123', nivel = 'pastor', id_pessoa = '$ult_id', foto = '$foto', igreja = '$igreja'");
+	$query = $pdo->prepare("INSERT INTO usuarios SET nome = :nome, email = :email, cpf = :cpf, senha = '123', nivel = 'coordenador', id_pessoa = '$ult_id', foto = '$foto', igreja = '$igreja'");
 
 	$query->bindValue(":nome", "$nome");
 	$query->bindValue(":email", "$email");
@@ -64,7 +64,7 @@ if($id == "" || $id == "0"){
 }else{
 	
 	if($foto == ""){
-		$query = $pdo->prepare("UPDATE pastores SET nome = :nome, email = :email, cpf = :cpf, telefone = :telefone, endereco = :endereco,  data_nasc = '$data_nasc', igreja = '$igreja' where id = '$id'");
+		$query = $pdo->prepare("UPDATE coordenadores SET nome = :nome, email = :email, cpf = :cpf, telefone = :telefone, endereco = :endereco,  data_nasc = '$data_nasc', igreja = '$igreja' where id = '$id'");
 	}else{
 
 		//BUSCAR A IMAGEM PARA EXCLUIR DA PASTA
@@ -75,7 +75,7 @@ if($id == "" || $id == "0"){
 			@unlink('../../sistema/img/membros/'.$img);	
 		}
 
-		$query = $pdo->prepare("UPDATE pastores SET nome = :nome, email = :email, cpf = :cpf, telefone = :telefone, endereco = :endereco, data_nasc = '$data_nasc', igreja = '$igreja', foto = '$foto' where id = '$id'");
+		$query = $pdo->prepare("UPDATE coordenadores SET nome = :nome, email = :email, cpf = :cpf, telefone = :telefone, endereco = :endereco, data_nasc = '$data_nasc', igreja = '$igreja', foto = '$foto' where id = '$id'");
 	}
 
 	$query->bindValue(":nome", "$nome");
@@ -88,9 +88,9 @@ if($id == "" || $id == "0"){
 
 	if($foto == ""){
 
-	$query = $pdo->prepare("UPDATE usuarios SET nome = :nome, email = :email, cpf = :cpf, igreja = '$igreja' where id_pessoa = '$id' and nivel = 'pastor'");
+	$query = $pdo->prepare("UPDATE usuarios SET nome = :nome, email = :email, cpf = :cpf, igreja = '$igreja' where id_pessoa = '$id' and nivel = 'coordenador'");
 	}else{
-	$query = $pdo->prepare("UPDATE usuarios SET nome = :nome, email = :email, cpf = :cpf, foto = '$foto', igreja = '$igreja' where id_pessoa = '$id' and nivel = 'pastor'");
+	$query = $pdo->prepare("UPDATE usuarios SET nome = :nome, email = :email, cpf = :cpf, foto = '$foto', igreja = '$igreja' where id_pessoa = '$id' and nivel = 'coordenador'");
 	}
 
 	$query->bindValue(":nome", "$nome");

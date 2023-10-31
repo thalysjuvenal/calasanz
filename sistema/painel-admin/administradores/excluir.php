@@ -14,7 +14,7 @@ if($foto != "sem-foto.jpg"){
 
 
 $query = $pdo->query("DELETE FROM $pagina where id = '$id'");
-$query = $pdo->query("DELETE FROM usuarios where id_pessoa = '$id' and nivel = 'bispo'");
+$query = $pdo->query("DELETE FROM usuarios where id_pessoa = '$id' and nivel = 'administrador'");
 
 
 //EXECUTAR NO LOG

@@ -22,7 +22,7 @@ if($total_reg > 0){
 	$acao = 'Login';
 	$id_reg = 0;
 	$descricao = 'Login';
-	if($res[0]['nivel'] == 'bispo'){
+	if($res[0]['nivel'] == 'administrador'){
 		$painel = 'Painel Administrativo';
 		$igreja = 0;
 	}else{
@@ -33,11 +33,11 @@ if($total_reg > 0){
 
 
 
-	if($res[0]['nivel'] == 'bispo'){
+	if($res[0]['nivel'] == 'administrador'){
 		echo "<script>window.location='painel-admin'</script>";
 	}
 
-	if($res[0]['nivel'] == 'pastor'){
+	if($res[0]['nivel'] == 'coordenador'){
 		echo "<script>window.location='painel-igreja'</script>";
 	}
 

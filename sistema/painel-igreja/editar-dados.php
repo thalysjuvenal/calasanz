@@ -77,10 +77,10 @@ $query->bindValue(":cpf", "$cpf");
 $query->bindValue(":senha", "$senha");
 
 
-if($nivel_usu == 'bispo'){
-	$nome_tab = 'bispos';
-}else if($nivel_usu == 'pastor'){
-	$nome_tab = 'pastores';
+if($nivel_usu == 'administrador'){
+	$nome_tab = 'administradores';
+}else if($nivel_usu == 'coordenador'){
+	$nome_tab = 'coordenadores';
 }else if($nivel_usu == 'tesoureiro'){
 	$nome_tab = 'tesoureiros';
 }else if($nivel_usu == 'secretario'){

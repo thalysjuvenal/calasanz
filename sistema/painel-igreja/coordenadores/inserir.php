@@ -61,7 +61,7 @@ if($id == "" || $id == 0){
 	$query->execute();
 	$ult_id = $pdo->lastInsertId();
 
-	$query = $pdo->prepare("INSERT INTO usuarios SET nome = :nome, email = :email, cpf = :cpf, senha = '123', nivel = 'pastor', id_pessoa = '$ult_id', foto = '$imagem', igreja = '$igreja'");
+	$query = $pdo->prepare("INSERT INTO usuarios SET nome = :nome, email = :email, cpf = :cpf, senha = '123', nivel = 'coordenador', id_pessoa = '$ult_id', foto = '$imagem', igreja = '$igreja'");
 
 	$query->bindValue(":nome", "$nome");
 	$query->bindValue(":email", "$email");
@@ -93,9 +93,9 @@ if($id == "" || $id == 0){
 	$query->execute();
 
 	if($imagem == "sem-foto.jpg"){
-	$query = $pdo->prepare("UPDATE usuarios SET nome = :nome, email = :email, cpf = :cpf, igreja = '$igreja' where id_pessoa = '$id' and nivel = 'pastor'");
+	$query = $pdo->prepare("UPDATE usuarios SET nome = :nome, email = :email, cpf = :cpf, igreja = '$igreja' where id_pessoa = '$id' and nivel = 'coordenador'");
 }else{
-	$query = $pdo->prepare("UPDATE usuarios SET nome = :nome, email = :email, cpf = :cpf, foto = '$imagem', igreja = '$igreja' where id_pessoa = '$id' and nivel = 'pastor'");
+	$query = $pdo->prepare("UPDATE usuarios SET nome = :nome, email = :email, cpf = :cpf, foto = '$imagem', igreja = '$igreja' where id_pessoa = '$id' and nivel = 'coordenador'");
 }
 
 	$query->bindValue(":nome", "$nome");

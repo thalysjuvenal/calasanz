@@ -6,7 +6,7 @@
 	$acao = 'Logout';
 	$id_reg = 0;
 	$descricao = 'Logout';
-	if($_SESSION['nivel_usuario'] == 'bispo'){
+	if($_SESSION['nivel_usuario'] == 'administrador'){
 		$painel = 'Painel Administrativo';
 		$igreja = 0;
 	}else{

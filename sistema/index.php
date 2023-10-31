@@ -2,7 +2,7 @@
 require_once("conexao.php");
 
 //CRIAR O USUÁRIO ADMINISTRADOR CASO ELE NÃO EXISTA
-$query = $pdo->query("SELECT * from usuarios where nivel = 'bispo' ");
+$query = $pdo->query("SELECT * from usuarios where nivel = 'administrador' ");
 $res = $query->fetchAll(PDO::FETCH_ASSOC);
 $total_reg = @count($res);
 

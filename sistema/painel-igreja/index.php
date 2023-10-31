@@ -279,7 +279,7 @@ if ($pag == "") {
 								<li><a class="dropdown-item" href="#" data-bs-toggle="modal"
 										data-bs-target="#modalPerfil">Editar Dados</a></li>
 
-								<?php if ($nivel_usu == 'bispo') { ?>
+								<?php if ($nivel_usu == 'administrador') { ?>
 									<li><a class="dropdown-item" href="../painel-admin">Painel Administrador</a></li>
 
 								<?php } ?>
