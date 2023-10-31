@@ -28,7 +28,7 @@ $pagina = 'fechamentos';
 					<th class="esc">Saídas</th>
 					<th class="esc">Entradas</th>
 					<th class="esc">Saldo</th>	
-					<th class="esc">Prebenda</th>	
+					<!--<th class="esc">Prebenda</th>-->
 					<th class="esc">Saldo Final</th>	
 					<th>Ações</th>
 				</tr>		
@@ -44,7 +44,7 @@ $pagina = 'fechamentos';
 					$usuario = $res[$i]['usuario'];
 					$entradas = $res[$i]['entradas'];
 					$saldo = $res[$i]['saldo'];
-					$prebenda = $res[$i]['prebenda'];
+					//$prebenda = $res[$i]['prebenda'];
 					$saldo_final = $res[$i]['saldo_final'];
 									
 					$id = $res[$i]['id'];
@@ -53,7 +53,7 @@ $pagina = 'fechamentos';
 					$entradasF = number_format($entradas, 2, ',', '.');
 					$saidasF = number_format($saidas, 2, ',', '.');
 					$saldoF = number_format($saldo, 2, ',', '.');
-					$prebendaF = number_format($prebenda, 2, ',', '.');
+					//$prebendaF = number_format($prebenda, 2, ',', '.');
 					$saldo_finalF = number_format($saldo_final, 2, ',', '.');
 
 					$separar = explode("-", $data_fec);
@@ -128,7 +128,7 @@ $pagina = 'fechamentos';
 						<td class="esc">R$ <?php echo $saidasF ?></td>
 						<td class="esc">R$ <?php echo $entradasF ?></td>
 						<td class="esc">R$ <?php echo $saldoF ?></td>
-						<td class="esc">R$ <?php echo $prebendaF ?></td>
+						<!--<td class="esc">R$ <?php echo $prebendaF ?></td>-->
 						<td class="esc">R$ <?php echo $saldo_finalF ?></td>
 						<td>						
 
