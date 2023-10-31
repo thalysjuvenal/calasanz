@@ -1,6 +1,6 @@
 <?php
 require_once("../../conexao.php");
-$pagina = 'pastores';
+$pagina = 'coordenadores';
 $id = @$_POST['id-excluir'];
 
 //excluir a imagem

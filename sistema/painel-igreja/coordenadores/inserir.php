@@ -1,6 +1,6 @@
 <?php
 require_once("../../conexao.php");
-$pagina = 'pastores';
+$pagina = 'coordenadores';
 $nome = $_POST['nome'];
 $cpf = $_POST['cpf'];
 $email = $_POST['email'];

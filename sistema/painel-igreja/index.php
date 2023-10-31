@@ -109,12 +109,12 @@ if($pag == ""){
 						</a>
 						<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
 							<li><a class="dropdown-item" href="index.php?pag=membros">Membros</a></li>
-							<li><a class="dropdown-item" href="index.php?pag=visitantes">Visitantes</a></li>
-							<li><a class="dropdown-item <?php echo $esc_tesoureiro ?> <?php echo $esc_secretario ?>" href="index.php?pag=pastores">Pastores (Presbíteros)</a></li>
+							<!--<li><a class="dropdown-item" href="index.php?pag=visitantes">Visitantes</a></li>-->
+							<li><a class="dropdown-item <?php echo $esc_tesoureiro ?> <?php echo $esc_secretario ?>" href="index.php?pag=pastores">Coordenadores</a></li>
 							<li><a class="dropdown-item <?php echo $esc_tesoureiro ?> <?php echo $esc_secretario ?>" href="index.php?pag=tesoureiros">Tesoureiros</a></li>
-							<li><a class="dropdown-item <?php echo $esc_tesoureiro ?> <?php echo $esc_secretario ?>" href="index.php?pag=secretarios">Secretários</a>
+							<!--<li><a class="dropdown-item <//?php echo $esc_tesoureiro ?> <//?php echo $esc_secretario ?>" href="index.php?pag=secretarios">Secretários</a>-->
 							</li>
-							<li><a class="dropdown-item  <?php echo $esc_secretario ?>" href="index.php?pag=fornecedores">Fornecedores</a>
+							<!--<li><a class="dropdown-item  <//?php echo $esc_secretario ?>" href="index.php?pag=fornecedores">Fornecedores</a>-->
 							</li>
 							<li><hr class="dropdown-divider"></li>
 							<li><a class="dropdown-item <?php echo $esc_tesoureiro ?> <?php echo $esc_secretario ?>" href="index.php?pag=usuarios">Usuários</a></li>
