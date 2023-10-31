@@ -110,7 +110,7 @@ if($pag == ""){
 						<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
 							<li><a class="dropdown-item" href="index.php?pag=membros">Membros</a></li>
 							<!--<li><a class="dropdown-item" href="index.php?pag=visitantes">Visitantes</a></li>-->
-							<li><a class="dropdown-item <?php echo $esc_tesoureiro ?> <?php echo $esc_secretario ?>" href="index.php?pag=pastores">Coordenadores</a></li>
+							<li><a class="dropdown-item <?php echo $esc_tesoureiro ?> <?php echo $esc_secretario ?>" href="index.php?pag=coordenadores">Coordenadores</a></li>
 							<li><a class="dropdown-item <?php echo $esc_tesoureiro ?> <?php echo $esc_secretario ?>" href="index.php?pag=tesoureiros">Tesoureiros</a></li>
 							<!--<li><a class="dropdown-item <//?php echo $esc_tesoureiro ?> <//?php echo $esc_secretario ?>" href="index.php?pag=secretarios">Secretários</a>-->
 							</li>
