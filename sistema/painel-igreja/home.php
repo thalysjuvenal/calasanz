@@ -289,7 +289,7 @@ $totalAniversariantes = $total_reg + $total_reg_pastores;
 									</div>
 									<div class="col-9 text-end">
 										<h3> <span class="text-secondary"><?php echo @$membrosCadastrados ?></span></h3>
-										<span class="textocinzaescuro">Total de Membros</span>
+										<span class="textocinzaescuro">Total de Dizimistas</span>
 									</div>
 								</div>
 							</div>

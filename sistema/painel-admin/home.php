@@ -127,7 +127,7 @@ $pdo->query("DELETE FROM logs where data < '$data_limpeza'");
 										<h3> <span class="text-danger">
 												<?php echo @$membrosCadastrados ?>
 											</span></h3>
-										<span class="textocinzaescuro">Total de Membros</span>
+										<span class="textocinzaescuro">Total de Dizimistas</span>
 									</div>
 								</div>
 							</div>
