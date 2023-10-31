@@ -142,14 +142,13 @@ $pagina = 'igrejas';
 							</div>
 						</div>
 
-						<div class="col-md-3">
+						<!--<div class="col-md-3">
 							<div class="mb-3">
 								<label for="exampleFormControlInput1" class="form-label">Prebenda %</label>
 								<input type="number" class="form-control" id="prebenda" name="prebenda" placeholder="Valor em %">
 							</div>
-						</div>
+						</div>-->
 
-						
 
 					</div>
 
@@ -165,7 +164,7 @@ $pagina = 'igrejas';
 						<div class="row">
 						<div class="col-md-4">
 							<div class="mb-3">
-								<label for="exampleFormControlInput1" class="form-label">Pastor Responsável</label>
+								<label for="exampleFormControlInput1" class="form-label">Coordenador Responsável</label>
 								<select class="form-control sel2" id="pastor" name="pastor" style="width:100%;">
 									<?php 
 									$query = $pdo->query("SELECT * FROM pastores order by nome asc");
