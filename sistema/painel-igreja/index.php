@@ -133,7 +133,7 @@ if ($pag == "") {
 					<li><a class="dropdown-item <?php echo $esc_tesoureiro ?> <?php echo $esc_secretario ?>"
 							href="index.php?pag=usuarios">Usuários</a></li>
 
-					<li><a class="dropdown-item <?php echo $esc_tesoureiro ?>"
+					<li><a class="dropdown-item <?php echo $esc_secretario ?>"
 							href="index.php?pag=aniversariantes">Aniversáriantes do Mês</a></li>
 
 
