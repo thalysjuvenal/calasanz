@@ -115,6 +115,9 @@ $pagina = 'membros';
 					?>
 					<tr class="<?php echo $inativa ?>">
 						<td>
+							<?php echo $id ?>
+						</td>
+						<td>
 							<?php echo $nome ?>
 						</td>
 						<td>
