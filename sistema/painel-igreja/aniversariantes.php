@@ -48,10 +48,10 @@ if(@$_GET['filtrar'] == "dia"){
 				<tr>
 					<th>Nome</th>
 					<th>Data Nascimento</th>
-					<th class="esc">Email</th>
+					<th class="esc">Endereço</th>
 					<th class="esc">Telefone</th>
 					<!--<th class="esc">Cargo</th>-->
-					<th class="esc">Foto</th>
+					<!--<th class="esc">Foto</th>-->
 					<th class="d-none">Ativo</th>
 					
 					<th>Ações</th>
@@ -128,11 +128,11 @@ if(@$_GET['filtrar'] == "dia"){
 					<tr class="<?php echo $classe_aniv ?>">
 						<td><?php echo $nome ?></td>
 						<td><?php echo $data_nascF ?></td>
-						<td class="esc"><?php echo $email ?></td>
+						<td class="esc"><?php echo $endereco ?></td>
 						<td class="esc"><?php echo $telefone ?></td>
-						<td class="esc"><?php echo $nome_cargo ?></td>
+						<!--<td class="esc"><?php echo $nome_cargo ?></td>-->
 						
-						<td class="esc"><img src="../img/membros/<?php echo $foto ?>" width="30px"></td>
+						<!--<td class="esc"><img src="../img/membros/<?php echo $foto ?>" width="30px"></td>-->
 
 						<td class="d-none"><?php echo $tab ?></td>
 						
