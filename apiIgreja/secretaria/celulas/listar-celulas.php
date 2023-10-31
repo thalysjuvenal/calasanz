@@ -45,7 +45,7 @@ for($i=0; $i < count($res); $i++){
                     }
 
 
-                    $query_con = $pdo->query("SELECT * FROM pastores where id = '$pastor'");
+                    $query_con = $pdo->query("SELECT * FROM coordenadores where id = '$pastor'");
                     $res_con = $query_con->fetchAll(PDO::FETCH_ASSOC);
                     if(count($res_con) > 0){
                         $nome_pastor = $res_con[0]['nome'];

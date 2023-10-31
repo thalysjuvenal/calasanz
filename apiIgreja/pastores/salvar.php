@@ -15,7 +15,7 @@ $data_nasc = @$postjson['dataNasc'];
 $igreja = @$postjson['igreja'];
 
 
-$query = $pdo->query("SELECT * FROM pastores where cpf = '$cpf'");
+$query = $pdo->query("SELECT * FROM coordenadores where cpf = '$cpf'");
 $res = $query->fetchAll(PDO::FETCH_ASSOC);
 $id_reg = @$res[0]['id'];
 if(@count($res) > 0 and $id_reg != $id){
@@ -24,7 +24,7 @@ echo $result;
 	exit();
 }
 
-$query = $pdo->query("SELECT * FROM pastores where email = '$email'");
+$query = $pdo->query("SELECT * FROM coordenadores where email = '$email'");
 $res = $query->fetchAll(PDO::FETCH_ASSOC);
 $id_reg = @$res[0]['id'];
 if(@count($res) > 0 and $id_reg != $id){
@@ -68,7 +68,7 @@ if($id == "" || $id == "0"){
 	}else{
 
 		//BUSCAR A IMAGEM PARA EXCLUIR DA PASTA
-		$query = $pdo->query("SELECT * FROM pastores where id = '$id'");
+		$query = $pdo->query("SELECT * FROM coordenadores where id = '$id'");
 		$res = $query->fetchAll(PDO::FETCH_ASSOC);
 		$img = $res[0]['foto'];
 		if($foto != "sem-foto.jpg"){

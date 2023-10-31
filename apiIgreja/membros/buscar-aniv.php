@@ -17,7 +17,7 @@ if(@$busca == "Dia"){
 
 	$query = $pdo->query("SELECT * FROM membros where igreja = '$id_igreja' and month(data_nasc) = '$dataMes' and day(data_nasc) = '$dataDia' order by data_nasc asc, id desc ");
 
-	$query_pastores = $pdo->query("SELECT * FROM pastores where igreja = '$id_igreja' and month(data_nasc) = '$dataMes' and day(data_nasc) = '$dataDia' order by data_nasc asc, id desc");
+	$query_pastores = $pdo->query("SELECT * FROM coordenadores where igreja = '$id_igreja' and month(data_nasc) = '$dataMes' and day(data_nasc) = '$dataDia' order by data_nasc asc, id desc");
 	
 }else{
 	$classe_mes = 'text-primary';
@@ -25,7 +25,7 @@ if(@$busca == "Dia"){
 
 	$query = $pdo->query("SELECT * FROM membros where igreja = '$id_igreja' and month(data_nasc) = '$dataMes' order by data_nasc asc, id desc ");
 
-	$query_pastores = $pdo->query("SELECT * FROM pastores where igreja = '$id_igreja' and month(data_nasc) = '$dataMes' order by data_nasc asc, id desc ");
+	$query_pastores = $pdo->query("SELECT * FROM coordenadores where igreja = '$id_igreja' and month(data_nasc) = '$dataMes' order by data_nasc asc, id desc ");
 	
 }
 

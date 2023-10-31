@@ -64,7 +64,7 @@ $pagina = 'informativos';
 
 					$dataF = implode('/', array_reverse(explode('-', $data)));
 
-					$query_con = $pdo->query("SELECT * FROM pastores where id = '$pastor_responsavel'");
+					$query_con = $pdo->query("SELECT * FROM coordenadores where id = '$pastor_responsavel'");
 					$res_con = $query_con->fetchAll(PDO::FETCH_ASSOC);
 					if(count($res_con) > 0){
 						$nome_pastor_resp = $res_con[0]['nome'];
@@ -160,7 +160,7 @@ $pagina = 'informativos';
 								<label for="exampleFormControlInput1" class="form-label">Pastor Responsável</label>
 								<select class="form-control sel2" id="pastor_responsavel" name="pastor_responsavel" style="width:100%;" required>										
 										<?php 
-										$query = $pdo->query("SELECT * FROM pastores where igreja = '$id_igreja' order by id asc");
+										$query = $pdo->query("SELECT * FROM coordenadores where igreja = '$id_igreja' order by id asc");
 										$res = $query->fetchAll(PDO::FETCH_ASSOC);
 										$total_reg = count($res);
 										if($total_reg > 0){

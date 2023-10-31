@@ -6,7 +6,7 @@ $postjson = json_decode(file_get_contents('php://input'), true);
 
 $id = @$_GET['id'];
 
-$query = $pdo->prepare("SELECT * from pastores where id = '$id' order by nome ASC");
+$query = $pdo->prepare("SELECT * FROM coordenadores where id = '$id' order by nome ASC");
 
 $query->execute();
 

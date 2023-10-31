@@ -180,7 +180,7 @@ $pdo->query("DELETE FROM logs where data < '$data_limpeza'");
 			$membrosCad = @count($res_m);
 
 
-			$query_con = $pdo->query("SELECT * FROM pastores where id = '$pastor'");
+			$query_con = $pdo->query("SELECT * FROM coordenadores where id = '$pastor'");
 			$res_con = $query_con->fetchAll(PDO::FETCH_ASSOC);
 			if (count($res_con) > 0) {
 				$nome_p = $res_con[0]['nome'];

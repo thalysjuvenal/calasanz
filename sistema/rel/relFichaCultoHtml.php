@@ -31,7 +31,7 @@ if($cab_rel != 'sem-foto.jpg'){
 }
 
 
-$query = $pdo->query("SELECT * FROM pastores where id = '$pastor_igreja'");
+$query = $pdo->query("SELECT * FROM coordenadores where id = '$pastor_igreja'");
 $res = $query->fetchAll(PDO::FETCH_ASSOC);
 $nome_pastor = $res[0]['nome'];
 
@@ -90,7 +90,7 @@ $query = $pdo->query("SELECT * FROM informativos where id = '$id'");
 
 					$dataF = implode('/', array_reverse(explode('-', $data)));
 
-					$query_con = $pdo->query("SELECT * FROM pastores where id = '$pastor_responsavel'");
+					$query_con = $pdo->query("SELECT * FROM coordenadores where id = '$pastor_responsavel'");
 					$res_con = $query_con->fetchAll(PDO::FETCH_ASSOC);
 					if(count($res_con) > 0){
 						$nome_pastor_resp = $res_con[0]['nome'];

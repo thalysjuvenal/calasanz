@@ -10,7 +10,7 @@ $id_igreja = @$_GET['igreja'];
 
 $inicio = ($limite * $pagina) - $limite; 
 
-$query = $pdo->prepare("SELECT * FROM pastores where igreja = '$id_igreja' ORDER BY nome ASC LIMIT $inicio, $limite");
+$query = $pdo->prepare("SELECT * FROM coordenadores where igreja = '$id_igreja' ORDER BY nome ASC LIMIT $inicio, $limite");
 
 $query->execute();
 

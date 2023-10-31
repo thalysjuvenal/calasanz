@@ -39,7 +39,7 @@ $video_igreja = $res[0]['video'];
 $email_igreja = $res[0]['email'];
 $descricao_igreja = $res[0]['descricao'];
 
-$query = $pdo->query("SELECT * FROM pastores where id = '$pastor_id'");
+$query = $pdo->query("SELECT * FROM coordenadores where id = '$pastor_id'");
 $res = $query->fetchAll(PDO::FETCH_ASSOC);
 $pastor_resp = $res[0]['nome'];
 }else{

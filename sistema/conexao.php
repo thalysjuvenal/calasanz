@@ -51,7 +51,7 @@ $marca_dagua = 'Sim';
 //INSERIR REGISTROS INICIAIS
 
 //Criar um Bispo (Pastor Presidente) padrão
-$query = $pdo->query("SELECT * FROM bispos");
+$query = $pdo->query("SELECT * FROM administradores");
 $res = $query->fetchAll(PDO::FETCH_ASSOC);
 $total_reg = count($res);
 
@@ -60,7 +60,7 @@ $pdo->query("INSERT INTO bispos SET nome = 'Super Administrador', email = '$emai
 
 
 //Criar o cadastro do Bispo na tabela de pastores
-$query = $pdo->query("SELECT * FROM pastores");
+$query = $pdo->query("SELECT * FROM coordenadores");
 $res = $query->fetchAll(PDO::FETCH_ASSOC);
 $total_reg = count($res);
 

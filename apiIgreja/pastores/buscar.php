@@ -7,7 +7,7 @@ $postjson = json_decode(file_get_contents('php://input'), true);
 $buscar = '%' .@$_GET['buscar']. '%';
 $id_igreja = @$_GET['igreja']; 
 
-$query = $pdo->prepare("SELECT * from pastores where (nome LIKE '$buscar' or email LIKE '$buscar' or cpf LIKE '$buscar') and igreja = '$id_igreja' order by nome ASC");
+$query = $pdo->prepare("SELECT * FROM coordenadores where (nome LIKE '$buscar' or email LIKE '$buscar' or cpf LIKE '$buscar') and igreja = '$id_igreja' order by nome ASC");
 
 $query->execute();
 
