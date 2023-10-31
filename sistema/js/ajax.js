@@ -1,19 +1,19 @@
-function inserir(){
-	$('#mensagem').text('');
-	$('#tituloModal').text('Inserir Registro');
+function inserir() {
+    $('#mensagem').text('');
+    $('#tituloModal').text('Inserir Registro');
     limpar();
-	var myModal = new bootstrap.Modal(document.getElementById('modalForm'), {
-		backdrop: 'static',
-	});
-	myModal.show();
-    
+    var myModal = new bootstrap.Modal(document.getElementById('modalForm'), {
+        backdrop: 'static',
+    });
+    myModal.show();
+
 }
 
 
-function excluir(id, nome){
+function excluir(id, nome) {
     $('#id-excluir').val(id);
     $('#nome-excluido').text(nome);
-    var myModal = new bootstrap.Modal(document.getElementById('modalExcluir'), {       });
+    var myModal = new bootstrap.Modal(document.getElementById('modalExcluir'), {});
     myModal.show();
     $('#mensagem-excluir').text('');
     limpar();
@@ -22,20 +22,20 @@ function excluir(id, nome){
 
 
 
-function mudarStatus(id, ativar){
-      
+function mudarStatus(id, ativar) {
+
     $.ajax({
         url: pag + "/mudar-status.php",
         method: 'POST',
-        data: {id, ativar},
+        data: { id, ativar },
         dataType: "text",
 
         success: function (mensagem) {
             if (mensagem.trim() == "Alterado com Sucesso") {
-                 window.location="index.php?pag=" + pag;
-            }else {
-                 mensagemErroAtivar()
-                }               
+                window.location = "index.php?pag=" + pag;
+            } else {
+                mensagemErroAtivar()
+            }
         },
 
     });
@@ -46,47 +46,47 @@ function mudarStatus(id, ativar){
 
 
 $("#form").submit(function () {
-	event.preventDefault();
-	var formData = new FormData(this);
-  $('#btn_salvar').hide();
-  $('#mensagem').text('Salvando!');
+    event.preventDefault();
+    var formData = new FormData(this);
+    $('#btn_salvar').hide();
+    $('#mensagem').text('Salvando!');
 
-	$.ajax({
-		url: pag + "/inserir.php",
-		type: 'POST',
-		data: formData,
+    $.ajax({
+        url: pag + "/inserir.php",
+        type: 'POST',
+        data: formData,
 
-		success: function (mensagem) {
-			$('#mensagem').text('');
-			$('#mensagem').removeClass()
-			if (mensagem.trim() == "Salvo com Sucesso") {
-                    //$('#nome').val('');
-                    //$('#cpf').val('');
-                     $('#btn-fechar').click();
-                     mensagemSalvar();
-                     
-                     setTimeout(function(){
-                        window.location="index.php?pag=" + pag;
-                    }, 500)
-                     
-                    
-                     
-                } else {
+        success: function (mensagem) {
+            $('#mensagem').text('');
+            $('#mensagem').removeClass()
+            if (mensagem.trim() == "Salvo com Sucesso") {
+                //$('#nome').val('');
+                //$('#cpf').val('');
+                $('#btn-fechar').click();
+                mensagemSalvar();
 
-                	$('#mensagem').addClass('text-danger')
-                	$('#mensagem').text(mensagem)
-                }
-
-                $('#btn_salvar').show();
+                setTimeout(function () {
+                    window.location = "index.php?pag=" + pag;
+                }, 500)
 
 
-            },
 
-            cache: false,
-            contentType: false,
-            processData: false,
-            
-        });
+            } else {
+
+                $('#mensagem').addClass('text-danger')
+                $('#mensagem').text(mensagem)
+            }
+
+            $('#btn_salvar').show();
+
+
+        },
+
+        cache: false,
+        contentType: false,
+        processData: false,
+
+    });
 
 });
 
@@ -96,7 +96,7 @@ $("#form").submit(function () {
 $("#form-excluir").submit(function () {
     event.preventDefault();
     var formData = new FormData(this);
-    
+
     $.ajax({
         url: pag + "/excluir.php",
         type: 'POST',
@@ -109,10 +109,10 @@ $("#form-excluir").submit(function () {
                 $('#btn-fechar-excluir').click();
                 mensagemExcluir()
 
-                 setTimeout(function(){
-                        window.location="index.php?pag=" + pag;
-                    }, 500)
-               		
+                setTimeout(function () {
+                    window.location = "index.php?pag=" + pag;
+                }, 500)
+
             } else {
 
                 $('#mensagem-excluir').addClass('text-danger')
@@ -133,11 +133,11 @@ $("#form-excluir").submit(function () {
 
 
 
-$(document).ready(function() {
-	$('#example').DataTable({
-		"ordering": false
-	});
-} );
+$(document).ready(function () {
+    $('#example').DataTable({
+        "ordering": false
+    });
+});
 
 
 
@@ -148,35 +148,35 @@ function carregarImg() {
     var file = document.querySelector("input[type=file]").files[0];
     var arquivo = file['name'];
     resultado = arquivo.split(".", 2);
-        //console.log(resultado[1]);
-        if(resultado[1] === 'pdf'){
-            $('#target').attr('src', "../img/pdf.png");
-            return;
-        }
-
-        if(resultado[1] === 'rar' || resultado[1] === 'zip'){
-            $('#target').attr('src', "../img/rar.png");
-            return;
-        }
-
-       if(resultado[1] === 'doc' || resultado[1] === 'docx'){
-            $('#target').attr('src', "../img/word.png");
-            return;
-        }
-
-        var reader = new FileReader();
-
-        reader.onloadend = function () {
-            target.src = reader.result;
-        };
-
-        if (file) {
-            reader.readAsDataURL(file);
-
-        } else {
-            target.src = "";
-        }
+    //console.log(resultado[1]);
+    if (resultado[1] === 'pdf') {
+        $('#target').attr('src', "../img/pdf.png");
+        return;
     }
+
+    if (resultado[1] === 'rar' || resultado[1] === 'zip') {
+        $('#target').attr('src', "../img/rar.png");
+        return;
+    }
+
+    if (resultado[1] === 'doc' || resultado[1] === 'docx') {
+        $('#target').attr('src', "../img/word.png");
+        return;
+    }
+
+    var reader = new FileReader();
+
+    reader.onloadend = function () {
+        target.src = reader.result;
+    };
+
+    if (file) {
+        reader.readAsDataURL(file);
+
+    } else {
+        target.src = "";
+    }
+}
 
 
 
@@ -186,25 +186,25 @@ function carregarImg2() {
     var file = document.querySelector("#imagem-usu").files[0];
     var arquivo = file['name'];
     resultado = arquivo.split(".", 2);
-        //console.log(resultado[1]);
-        if(resultado[1] === 'pdf'){
-            $('#target-usu').attr('src', "../img/pdf.png");
-            return;
-        }
-
-        var reader = new FileReader();
-
-        reader.onloadend = function () {
-            target.src = reader.result;
-        };
-
-        if (file) {
-            reader.readAsDataURL(file);
-
-        } else {
-            target.src = "";
-        }
+    //console.log(resultado[1]);
+    if (resultado[1] === 'pdf') {
+        $('#target-usu').attr('src', "../img/pdf.png");
+        return;
     }
+
+    var reader = new FileReader();
+
+    reader.onloadend = function () {
+        target.src = reader.result;
+    };
+
+    if (file) {
+        reader.readAsDataURL(file);
+
+    } else {
+        target.src = "";
+    }
+}
 
 
 
@@ -224,103 +224,103 @@ $("#form-obs").submit(function () {
             $('#mensagem-obs').text('');
             $('#mensagem-obs').removeClass()
             if (mensagem.trim() == "Salvo com Sucesso") {
-                    //$('#nome').val('');
-                    //$('#cpf').val('');
-                    $('#btn-fechar-obs').click();
-                     window.location="index.php?pag=" + pag;
-                } else {
+                //$('#nome').val('');
+                //$('#cpf').val('');
+                $('#btn-fechar-obs').click();
+                window.location = "index.php?pag=" + pag;
+            } else {
 
-                    $('#mensagem-obs').addClass('text-danger')
-                    $('#mensagem-obs').text(mensagem)
-                }
+                $('#mensagem-obs').addClass('text-danger')
+                $('#mensagem-obs').text(mensagem)
+            }
 
 
-            },
+        },
 
-            cache: false,
-            contentType: false,
-            processData: false,
-            
-        });
+        cache: false,
+        contentType: false,
+        processData: false,
+
+    });
 
 });
 
 
 
-function mensagemSalvar(){
-   
-toastr.options = {
-  "closeButton": false,
-  "debug": false,
-  "newestOnTop": false,
-  "progressBar": false,
-  "positionClass": "toast-bottom-center",
-  "preventDuplicates": false,
-  "onclick": null,
-  "showDuration": "1000",
-  "hideDuration": "1000",
-  "timeOut": "2000",
-  "extendedTimeOut": "1000",
-  "showEasing": "swing",
-  "hideEasing": "linear",
-  "showMethod": "fadeIn",
-  "hideMethod": "fadeOut"
-}
+function mensagemSalvar() {
 
- Command: toastr["success"]("Registro Salvo com Sucesso!!", "Salvo")
+    toastr.options = {
+        "closeButton": false,
+        "debug": false,
+        "newestOnTop": false,
+        "progressBar": false,
+        "positionClass": "toast-bottom-center",
+        "preventDuplicates": false,
+        "onclick": null,
+        "showDuration": "1000",
+        "hideDuration": "1000",
+        "timeOut": "2000",
+        "extendedTimeOut": "1000",
+        "showEasing": "swing",
+        "hideEasing": "linear",
+        "showMethod": "fadeIn",
+        "hideMethod": "fadeOut"
+    }
 
-}
-
-
-
-
-function mensagemExcluir(){
- 
-toastr.options = {
-  "closeButton": false,
-  "debug": false,
-  "newestOnTop": false,
-  "progressBar": false,
-  "positionClass": "toast-bottom-center",
-  "preventDuplicates": false,
-  "onclick": null,
-  "showDuration": "300",
-  "hideDuration": "1000",
-  "timeOut": "2000",
-  "extendedTimeOut": "1000",
-  "showEasing": "swing",
-  "hideEasing": "linear",
-  "showMethod": "fadeIn",
-  "hideMethod": "fadeOut"
-}
-
-Command: toastr["info"]("Registro Excluído!!", "Excluído")
+    Command: toastr["success"]("Registro Salvo com Sucesso!!", "Salvo")
 
 }
 
 
 
-function mensagemErroAtivar(){
- 
-toastr.options = {
-  "closeButton": false,
-  "debug": false,
-  "newestOnTop": false,
-  "progressBar": false,
-  "positionClass": "toast-bottom-center",
-  "preventDuplicates": false,
-  "onclick": null,
-  "showDuration": "300",
-  "hideDuration": "1000",
-  "timeOut": "5000",
-  "extendedTimeOut": "1000",
-  "showEasing": "swing",
-  "hideEasing": "linear",
-  "showMethod": "fadeIn",
-  "hideMethod": "fadeOut"
+
+function mensagemExcluir() {
+
+    toastr.options = {
+        "closeButton": false,
+        "debug": false,
+        "newestOnTop": false,
+        "progressBar": false,
+        "positionClass": "toast-bottom-center",
+        "preventDuplicates": false,
+        "onclick": null,
+        "showDuration": "300",
+        "hideDuration": "1000",
+        "timeOut": "2000",
+        "extendedTimeOut": "1000",
+        "showEasing": "swing",
+        "hideEasing": "linear",
+        "showMethod": "fadeIn",
+        "hideMethod": "fadeOut"
+    }
+
+    Command: toastr["info"]("Registro Excluído!!", "Excluído")
+
 }
 
-Command: toastr["error"]("Não é possível ter mais de um alerta ativo ao mesmo tempo.", "Erro ao Ativar")
+
+
+function mensagemErroAtivar() {
+
+    toastr.options = {
+        "closeButton": false,
+        "debug": false,
+        "newestOnTop": false,
+        "progressBar": false,
+        "positionClass": "toast-bottom-center",
+        "preventDuplicates": false,
+        "onclick": null,
+        "showDuration": "300",
+        "hideDuration": "1000",
+        "timeOut": "5000",
+        "extendedTimeOut": "1000",
+        "showEasing": "swing",
+        "hideEasing": "linear",
+        "showMethod": "fadeIn",
+        "hideMethod": "fadeOut"
+    }
+
+    Command: toastr["error"]("Não é possível ter mais de um alerta ativo ao mesmo tempo.", "Erro ao Ativar")
 
 
 }

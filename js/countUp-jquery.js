@@ -12,30 +12,30 @@
 // duration = duration of animation in seconds, default 2
 // options = optional object of options (see below)
 
-var CountUp = function(target, startVal, endVal, decimals, duration, options) {
+var CountUp = function (target, startVal, endVal, decimals, duration, options) {
 
 	// make sure requestAnimationFrame and cancelAnimationFrame are defined
 	// polyfill for browsers without native support
 	// by Opera engineer Erik Möller
 	var lastTime = 0;
 	var vendors = ['webkit', 'moz', 'ms', 'o'];
-	for(var x = 0; x < vendors.length && !window.requestAnimationFrame; ++x) {
-		window.requestAnimationFrame = window[vendors[x]+'RequestAnimationFrame'];
+	for (var x = 0; x < vendors.length && !window.requestAnimationFrame; ++x) {
+		window.requestAnimationFrame = window[vendors[x] + 'RequestAnimationFrame'];
 		window.cancelAnimationFrame =
-			window[vendors[x]+'CancelAnimationFrame'] || window[vendors[x]+'CancelRequestAnimationFrame'];
+			window[vendors[x] + 'CancelAnimationFrame'] || window[vendors[x] + 'CancelRequestAnimationFrame'];
 	}
 	if (!window.requestAnimationFrame) {
-		window.requestAnimationFrame = function(callback, element) {
+		window.requestAnimationFrame = function (callback, element) {
 			var currTime = new Date().getTime();
 			var timeToCall = Math.max(0, 16 - (currTime - lastTime));
-			var id = window.setTimeout(function() { callback(currTime + timeToCall); },
+			var id = window.setTimeout(function () { callback(currTime + timeToCall); },
 				timeToCall);
 			lastTime = currTime + timeToCall;
 			return id;
 		};
 	}
 	if (!window.cancelAnimationFrame) {
-		window.cancelAnimationFrame = function(id) {
+		window.cancelAnimationFrame = function (id) {
 			clearTimeout(id);
 		};
 	}
@@ -89,7 +89,7 @@ var CountUp = function(target, startVal, endVal, decimals, duration, options) {
 
 	if (self.options.separator === '') self.options.useGrouping = false;
 
-	self.initialize = function() {
+	self.initialize = function () {
 		if (self.initialized) return true;
 		self.d = (typeof target === 'string') ? document.getElementById(target) : target;
 		if (!self.d) {
@@ -115,7 +115,7 @@ var CountUp = function(target, startVal, endVal, decimals, duration, options) {
 	};
 
 	// Print value to target
-	self.printValue = function(value) {
+	self.printValue = function (value) {
 		var result = self.options.formattingFn(value);
 
 		if (self.d.tagName === 'INPUT') {
@@ -129,7 +129,7 @@ var CountUp = function(target, startVal, endVal, decimals, duration, options) {
 		}
 	};
 
-	self.count = function(timestamp) {
+	self.count = function (timestamp) {
 
 		if (!self.startTime) { self.startTime = timestamp; }
 
@@ -160,7 +160,7 @@ var CountUp = function(target, startVal, endVal, decimals, duration, options) {
 		}
 
 		// decimal
-		self.frameVal = Math.round(self.frameVal*self.dec)/self.dec;
+		self.frameVal = Math.round(self.frameVal * self.dec) / self.dec;
 
 		// format and print value
 		self.printValue(self.frameVal);
@@ -173,13 +173,13 @@ var CountUp = function(target, startVal, endVal, decimals, duration, options) {
 		}
 	};
 	// start your animation
-	self.start = function(callback) {
+	self.start = function (callback) {
 		if (!self.initialize()) return;
 		self.callback = callback;
 		self.rAF = requestAnimationFrame(self.count);
 	};
 	// toggles pause/resume animation
-	self.pauseResume = function() {
+	self.pauseResume = function () {
 		if (!self.paused) {
 			self.paused = true;
 			cancelAnimationFrame(self.rAF);
@@ -192,7 +192,7 @@ var CountUp = function(target, startVal, endVal, decimals, duration, options) {
 		}
 	};
 	// reset to startVal so animation can be run again
-	self.reset = function() {
+	self.reset = function () {
 		self.paused = false;
 		delete self.startTime;
 		self.initialized = false;
@@ -223,42 +223,42 @@ var CountUp = function(target, startVal, endVal, decimals, duration, options) {
 	if (self.initialize()) self.printValue(self.startVal);
 };
 
-(function($) {
- 
-    $.fn.countup = function(params) {
- 		// make sure dependency is present
-        if (typeof CountUp !== 'function') {
-        	console.error('countUp.js is a required dependency of countUp-jquery.js.');
-        	return;
-        }
+(function ($) {
 
-        var defaults = {
-        	startVal: 0,
-        	decimals: 0,
-        	duration: 2,
-        };
+	$.fn.countup = function (params) {
+		// make sure dependency is present
+		if (typeof CountUp !== 'function') {
+			console.error('countUp.js is a required dependency of countUp-jquery.js.');
+			return;
+		}
 
-        if (typeof params === 'number') {
-        	defaults.endVal = params;
-        }
-        else if (typeof params === 'object') {
-        	$.extend(defaults, params);
-        }
-        else {
-        	console.error('countUp-jquery requires its argument to be either an object or number');
-        	return;
-        } 
+		var defaults = {
+			startVal: 0,
+			decimals: 0,
+			duration: 2,
+		};
 
-        this.each(function(i, elem) {
-        	var countUp = new CountUp(elem, defaults.startVal, defaults.endVal, defaults.decimals, defaults.duration, defaults.options);
+		if (typeof params === 'number') {
+			defaults.endVal = params;
+		}
+		else if (typeof params === 'object') {
+			$.extend(defaults, params);
+		}
+		else {
+			console.error('countUp-jquery requires its argument to be either an object or number');
+			return;
+		}
 
-        	countUp.start();
-        });
+		this.each(function (i, elem) {
+			var countUp = new CountUp(elem, defaults.startVal, defaults.endVal, defaults.decimals, defaults.duration, defaults.options);
+
+			countUp.start();
+		});
 
 
 
-        return this;
- 
-    };
- 
+		return this;
+
+	};
+
 }(jQuery));
