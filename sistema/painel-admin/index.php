@@ -148,14 +148,14 @@ $data_ano = $ano_atual."-01-01";
 
 							<li><a class="dropdown-item" href="index.php?pag=igrejas">Igrejas</a></li>
 							
-							<li><a class="dropdown-item" href="index.php?pag=cargos">Cargos Ministeriais</a></li>
+							<li><a class="dropdown-item" href="index.php?pag=cargos">Funções</a></li>
 
 							<li><a class="dropdown-item" href="index.php?pag=frequencias">Frequências (Contas)</a></li>
 							
 						</ul>
 					</li>
 
-						<li class="nav-item dropdown">
+						<!--<li class="nav-item dropdown">
 						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
 							Consultas
 						</a>
@@ -166,7 +166,7 @@ $data_ano = $ano_atual."-01-01";
 							
 							
 						</ul>
-					</li>
+					</li>-->
 
 
 
@@ -178,7 +178,7 @@ $data_ano = $ano_atual."-01-01";
 
 							<li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#modalRelMembros">Membros</a></li>
 														
-							<li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#modalRelPatrimonios">Patrimônio</a></li>
+							<!--<li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#modalRelPatrimonios">Patrimônio</a></li>-->
 
 							<li><a class="dropdown-item " href="#" data-bs-toggle="modal" data-bs-target="#modalRelFinanceiro">Financeiros</a></li>
 
