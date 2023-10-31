@@ -495,8 +495,8 @@ $pagina = 'membros';
 				<span class=""><b>Igreja:</b> <span id="igreja-dados"></span></span>
 				<hr style="margin:4px">
 
-				<span class=""><b>Data de Batismo:</b> <span id="batismo-dados"></span></span>
-				<hr style="margin:4px">
+				<!--<span class=""><b>Data de Batismo:</b> <span id="batismo-dados"></span></span>
+				<hr style="margin:4px">-->
 
 				<div class="row">
 					<div class="col-md-6">
@@ -509,47 +509,47 @@ $pagina = 'membros';
 						<hr style="margin:4px">
 					</div>
 
-					<div class="col-md-6">
+					<!--<div class="col-md-6">
 						<span id="span-rg"><b>RG:</b> <span id="rg-dados"></span></span>
 						<hr style="margin:4px">
-					</div>
+					</div>-->
 
-					<div class="col-md-6">
+					<!--<div class="col-md-6">
 						<span id="span-membresia"><b>Membresia:</b> <span id="membresia-dados"></span></span>
 						<hr style="margin:4px">
-					</div>
+					</div>-->
 
 
-					<div class="col-md-12">
+					<!--<div class="col-md-12">
 						<span id="span-nacionalidade"><b>Nacionalidade:</b> <span
 								id="nacionalidade-dados"></span></span>
 						<hr style="margin:4px">
-					</div>
+					</div>-->
 
 
-					<div class="col-md-12">
+					<!--<div class="col-md-12">
 						<span id="span-naturalidade"><b>Naturalidade:</b> <span id="naturalidade-dados"></span></span>
 						<hr style="margin:4px">
-					</div>
+					</div>-->
 
 
 
 
 
-					<div class="col-md-12">
+					<!--<div class="col-md-12">
 						<span id="span-pai"><b>Nome Pai:</b> <span id="pai-dados"></span></span>
 						<hr style="margin:4px">
-					</div>
+					</div>-->
 
 
-					<div class="col-md-12">
+					<!--<div class="col-md-12">
 						<span id="span-mae"><b>Nome Mãe:</b> <span id="mae-dados"></span></span>
 						<hr style="margin:4px">
-					</div>
+					</div>-->
 				</div>
 
-				<span class=""><img src="" id="foto-dados" width="200px"></span>
-				<hr style="margin:4px">
+				<!--<span class=""><img src="" id="foto-dados" width="200px"></span>
+				<hr style="margin:4px">-->
 
 
 			</div>
