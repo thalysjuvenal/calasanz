@@ -5,9 +5,9 @@
 				<h3><?php echo $telefone_igreja ?></h3>
 			</div>
 			<div class="col-md-4 text-center">
-				<h2><a href="#">Cultos</a></h2>
+				<h2><a href="#">Programações</a></h2>
 				<?php 
-						$query = $pdo->query("SELECT * FROM cultos where igreja = '$id_igreja'");
+						$query = $pdo->query("SELECT * FROM programacao where igreja = '$id_igreja'");
 						$res = $query->fetchAll(PDO::FETCH_ASSOC);
 						$total_reg = count($res);
 						if($total_reg > 0){

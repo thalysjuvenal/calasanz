@@ -101,9 +101,9 @@ require_once("cabecalho.php");
 			<div class="row animate-box">
 				<div class="col-md-12 col-md-offset-0 text-center">
 					<h2>Vivendo na Maravilhosa Graça de Deus!</h2>
-						Cultos: 
+						Programações: 
 						<?php 
-						$query = $pdo->query("SELECT * FROM cultos where igreja = '$id_igreja'");
+						$query = $pdo->query("SELECT * FROM programacao where igreja = '$id_igreja'");
 						$res = $query->fetchAll(PDO::FETCH_ASSOC);
 						$total_reg = count($res);
 						if($total_reg > 0){
