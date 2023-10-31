@@ -3,11 +3,11 @@ require_once("../conexao.php");
 require_once("verificar.php");
 require_once("deslogar-tesoureiro.php");
 
-$pagina = 'cultos';
+$pagina = 'programacao';
 ?>
 
 <div class="col-md-12 my-3">
-	<a href="#" onclick="inserir()" type="button" class="btn btn-dark btn-sm">Novo Culto</a>
+	<a href="#" onclick="inserir()" type="button" class="btn btn-dark btn-sm">Novo Programacao</a>
 </div>
 
 <div class="tabela bg-light">

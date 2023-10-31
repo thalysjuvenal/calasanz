@@ -1,6 +1,6 @@
 <?php
 require_once("../../conexao.php");
-$pagina = 'cultos';
+$pagina = 'programacao';
 $nome = $_POST['nome'];
 $descricao = $_POST['descricao'];
 $dia = $_POST['dia'];
