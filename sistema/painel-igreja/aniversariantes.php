@@ -306,7 +306,7 @@ if (@$_GET['filtrar'] == "dia") {
 				<!--<span class=""><b>Data de Batismo:</b> <span id="batismo-dados"></span></span>
 					<hr style="margin:4px">-->
 
-				<!--<div class="row">
+				<div class="row">
 					<div class="col-md-6">
 						<span class=""><b>Cargo:</b> <span id="membro-dados"></span></span>
 						<hr style="margin:4px">
@@ -316,7 +316,7 @@ if (@$_GET['filtrar'] == "dia") {
 						<span id="span-estado"><b>Estado Cívil:</b> <span id="estado-dados"></span></span>
 						<hr style="margin:4px">
 					</div>
-				</div>-->
+				</div>
 
 				<!--<span class=""><img src="" id="foto-dados" width="200px"></span>-->
 				<hr style="margin:4px">
