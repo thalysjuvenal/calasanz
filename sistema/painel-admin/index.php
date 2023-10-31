@@ -831,7 +831,7 @@ $data_ano = $ano_atual."-01-01";
 									<select class="form-select form-select-sm" aria-label="Default select example" name="tabelas" id="tabelas">  
 										<option value="">Todas</option>
 										<option value="usuarios">Usuários</option>
-										<option value="patrimonios">Patrimônios</option>
+										<!--<option value="patrimonios">Patrimônios</option>-->
 										<option value="tesoureiros">Tesoureiros</option>
 										<option value="secretarios">Secretários</option>
 										<option value="coordenadores">Coordenadores</option>
@@ -839,7 +839,7 @@ $data_ano = $ano_atual."-01-01";
 										<option value="frequencias">Frequencias</option>
 										<option value="cargos">Cargos</option>
 										<option value="administradores">Administradores</option>
-										<option value="anexos">Anexos</option>
+										<!--<option value="anexos">Anexos</option>-->
 									</select>
 								</div>
 						</div>
