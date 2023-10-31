@@ -257,7 +257,7 @@ $pagina = 'membros';
 
 						<div class="col-md-3">
 							<div class="mb-3">
-								<label for="exampleFormControlInput1" class="form-label">Cargo Ministerial</label>
+								<label for="exampleFormControlInput1" class="form-label">Funções</label>
 								<select class="form-control sel2" id="cargo" name="cargo" style="width:100%;">
 									<?php
 									$query = $pdo->query("SELECT * FROM cargos order by id asc");
