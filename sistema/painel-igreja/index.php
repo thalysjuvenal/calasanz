@@ -179,7 +179,7 @@ if($pag == ""){
 					</li>
 
 
-					<li class="nav-item dropdown <?php echo $esc_tesoureiro ?>">
+					<!--<li class="nav-item dropdown <?php echo $esc_tesoureiro ?>">
 						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
 							Secretária
 						</a>
@@ -200,7 +200,7 @@ if($pag == ""){
 
 														
 						</ul>
-					</li>
+					</li>-->
 
 
 					<li class="nav-item dropdown">
@@ -211,20 +211,20 @@ if($pag == ""){
 
 							<li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#modalRelMembros">Membros</a></li>
 														
-							<li><a class="dropdown-item <?php echo $esc_tesoureiro ?>" href="#" data-bs-toggle="modal" data-bs-target="#modalRelPatrimonios">Patrimônio</a></li>
+							<!--<li><a class="dropdown-item <//?php echo $esc_tesoureiro ?>" href="#" data-bs-toggle="modal" data-bs-target="#modalRelPatrimonios">Patrimônio</a></li>-->
 
 							<li><a class="dropdown-item <?php echo $esc_secretario ?>" href="#" data-bs-toggle="modal" data-bs-target="#modalRelFinanceiro">Financeiros</a></li>
 
 							<li><a class="dropdown-item <?php echo $esc_tesoureiro ?>" href="#" data-bs-toggle="modal" data-bs-target="#modalRelAniversario">Aniversáriantes</a></li>
 
-							<li><a class="dropdown-item <?php echo $esc_tesoureiro ?>" href="../rel/fichaVisitante.php" target="_blank">Ficha Visitantes</a></li>
+							<!--<li><a class="dropdown-item <//?php echo $esc_tesoureiro ?>" href="../rel/fichaVisitante.php" target="_blank">Ficha Visitantes</a></li>-->
 																					
 						</ul>
 					</li>
 
-					<li class="nav-item">
+					<!--<li class="nav-item">
 						<a class="nav-link" aria-current="page" href="index.php?pag=anexos">Anexo Sede</a>
-					</li>
+					</li>-->
 
 					<li class="nav-item">
 						<a class="nav-link" aria-current="page" href="../../apiIgreja/notific/script.php" target="_blank">Notificações</a>
