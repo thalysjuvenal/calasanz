@@ -26,8 +26,8 @@ $pagina = 'membros';
 					<th>CPF</th>
 					<th class="esc">Email</th>
 					<th class="esc">Telefone</th>
-					<th class="esc">Cargo</th>
-					<th class="esc">Foto</th>
+					<!--<th class="esc">Cargo</th>-->
+					<!--<th class="esc">Foto</th>-->
 					<th class="d-none">Ativo</th>
 
 					<th>Ações</th>
@@ -129,9 +129,9 @@ $pagina = 'membros';
 						<td class="esc">
 							<?php echo $telefone ?>
 						</td>
-						<td class="esc">
-							<?php echo $nome_cargo ?>
-						</td>
+						<!--<td class="esc">
+							<//?php echo $nome_cargo ?>
+						</td>-->
 
 						<td class="esc"><img src="../img/membros/<?php echo $foto ?>" width="30px"></td>
 
