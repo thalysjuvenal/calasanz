@@ -23,8 +23,8 @@ $pagina = 'membros';
 				<tr>
 					<th>ID</th>
 					<th>Nome</th>
-					<th>CPF</th>
-					<th class="esc">Email</th>
+					<th>Endereco</th>
+					<!--<th class="esc">Email</th>-->
 					<th class="esc">Telefone</th>
 					<!--<th class="esc">Cargo</th>-->
 					<!--<th class="esc">Foto</th>-->
@@ -121,11 +121,11 @@ $pagina = 'membros';
 							<?php echo $nome ?>
 						</td>
 						<td>
-							<?php echo $cpf ?>
+							<?php echo $endereco ?>
 						</td>
-						<td class="esc">
-							<?php echo $email ?>
-						</td>
+						<!--<td class="esc">
+							<//?php echo $email ?>
+						</td>-->
 						<td class="esc">
 							<?php echo $telefone ?>
 						</td>
@@ -133,7 +133,7 @@ $pagina = 'membros';
 							<//?php echo $nome_cargo ?>
 						</td>-->
 
-						<!--<td class="esc"><img src="../img/membros/<?php echo $foto ?>" width="30px"></td>-->
+						<!--<td class="esc"><img src="../img/membros/<//?php echo $foto ?>" width="30px"></td>-->
 
 						<td class="d-none">
 							<?php echo $tab ?>
