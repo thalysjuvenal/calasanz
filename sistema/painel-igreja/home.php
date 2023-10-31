@@ -212,7 +212,7 @@ $totalAniversariantes = $total_reg + $total_reg_pastores;
 			</div>
 
 
-			<div class="col-xl-3 col-sm-6 col-12 linkcard mb-2 <?php echo $esc_secretario ?>"> 
+			<!--<div class="col-xl-3 col-sm-6 col-12 linkcard mb-2 <?php echo $esc_secretario ?>"> 
 				<a href="index.php?pag=pagar">
 					<div class="card">
 						<div class="card-content">
@@ -230,10 +230,10 @@ $totalAniversariantes = $total_reg + $total_reg_pastores;
 						</div>
 					</div>
 				</a>
-			</div>
+			</div>-->
 
 
-			<div class="col-xl-3 col-sm-6 col-12 linkcard mb-2 <?php echo $esc_secretario ?>"> 
+			<!--<div class="col-xl-3 col-sm-6 col-12 linkcard mb-2 <?php echo $esc_secretario ?>"> 
 				<a href="index.php?pag=vendas">
 					<div class="card">
 						<div class="card-content">
@@ -251,7 +251,7 @@ $totalAniversariantes = $total_reg + $total_reg_pastores;
 						</div>
 					</div>
 				</a>
-			</div>
+			</div>-->
 
 
 
