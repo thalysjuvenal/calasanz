@@ -48,7 +48,7 @@ $pagina = 'coordenadores';
 					$obs = $res[$i]['obs'];
 					$igreja = $res[$i]['igreja'];
 					$id = $res[$i]['id'];
-					$prebenda = $res[$i]['prebenda'];
+					//$prebenda = $res[$i]['prebenda'];
 
 
 					$query_con = $pdo->query("SELECT * FROM igrejas where id = '$igreja'");
@@ -149,12 +149,12 @@ $pagina = 'coordenadores';
 						</div>
 
 
-						<div class="col-md-3">
+						<!--<div class="col-md-3">
 							<div class="mb-3">
 								<label for="exampleFormControlInput1" class="form-label">Prebenda</label>
 								<input type="text" class="form-control" id="prebenda" name="prebenda" placeholder="Valor em %">
 							</div>
-						</div>
+						</div>-->
 
 
 					</div>
