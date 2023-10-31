@@ -307,10 +307,10 @@ if (@$_GET['filtrar'] == "dia") {
 					<hr style="margin:4px">-->
 
 				<div class="row">
-					<div class="col-md-6">
+					<!--<div class="col-md-6">
 						<span class=""><b>Cargo:</b> <span id="membro-dados"></span></span>
 						<hr style="margin:4px">
-					</div>
+					</div>-->
 
 					<div class="col-md-6">
 						<span id="span-estado"><b>Estado Cívil:</b> <span id="estado-dados"></span></span>
