@@ -502,12 +502,12 @@ $pagina = 'membros';
 					<!--<div class="col-md-6">
 						<span class=""><b>Cargo:</b> <span id="membro-dados"></span></span>
 						<hr style="margin:4px">
-					</div>
+					</div>-->
 
 					<div class="col-md-6">
 						<span id="span-estado"><b>Estado Civil:</b> <span id="estado-dados"></span></span>
 						<hr style="margin:4px">
-					</div>-->
+					</div>
 
 					<!--<div class="col-md-6">
 						<span id="span-rg"><b>RG:</b> <span id="rg-dados"></span></span>
