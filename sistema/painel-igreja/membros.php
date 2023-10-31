@@ -133,7 +133,7 @@ $pagina = 'membros';
 							<//?php echo $nome_cargo ?>
 						</td>-->
 
-						<td class="esc"><img src="../img/membros/<?php echo $foto ?>" width="30px"></td>
+						<!--<td class="esc"><img src="../img/membros/<?php echo $foto ?>" width="30px"></td>-->
 
 						<td class="d-none">
 							<?php echo $tab ?>
