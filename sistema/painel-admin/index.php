@@ -834,11 +834,11 @@ $data_ano = $ano_atual."-01-01";
 										<option value="patrimonios">Patrimônios</option>
 										<option value="tesoureiros">Tesoureiros</option>
 										<option value="secretarios">Secretários</option>
-										<option value="pastores">Pastores</option>
+										<option value="coordenadores">Coordenadores</option>
 										<option value="igrejas">Igrejas</option>
 										<option value="frequencias">Frequencias</option>
 										<option value="cargos">Cargos</option>
-										<option value="bispos">Bispos</option>
+										<option value="administradores">Administradores</option>
 										<option value="anexos">Anexos</option>
 									</select>
 								</div>
