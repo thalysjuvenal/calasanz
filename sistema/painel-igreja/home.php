@@ -192,7 +192,7 @@ $totalAniversariantes = $total_reg + $total_reg_pastores;
 
 
 			<div class="col-xl-3 col-sm-6 col-12 linkcard mb-2 <?php echo $esc_secretario ?>"> 
-				<a href="index.php?pag=ofertas">
+				<a href="index.php?pag=ofertas_missa">
 					<div class="card">
 						<div class="card-content">
 							<div class="card-body">
