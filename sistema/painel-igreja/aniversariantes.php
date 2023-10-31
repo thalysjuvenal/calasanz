@@ -211,7 +211,7 @@ if(@$_GET['filtrar'] == "dia"){
 						<td><?php echo $data_nascF ?></td>
 						<td class="esc"><?php echo $email ?></td>
 						<td class="esc"><?php echo $telefone ?></td>
-						<td class="esc">Pastor</td>
+						<!--<td class="esc">Pastor</td>-->
 						
 						<td class="esc"><img src="../img/membros/<?php echo $foto ?>" width="30px"></td>
 
