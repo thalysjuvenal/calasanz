@@ -451,7 +451,7 @@ $data_hoje = utf8_encode(strftime('%A, %d de %B de %Y', strtotime('today')));
 
 
 		<div class="footer"  align="center">
-			<span style="font-size:10px"><?php echo $end_igreja ?> - Telefone: <?php echo $tel_igreja ?> - Usuário: <?php echo $nome_pastor ?></span> 
+			<span style="font-size:10px"><?php echo $end_igreja ?> - Telefone: <?php echo $tel_igreja ?> - Contador Responsável: <?php echo $nome_pastor ?></span> 
 		</div>
 
 

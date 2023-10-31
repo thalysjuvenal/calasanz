@@ -133,7 +133,7 @@ $saldoMes = number_format($saldoMes, 2, ',', '.');
 $dataMes = Date('m');
 $dataDia = Date('d');
 $query = $pdo->query("SELECT * FROM membros where igreja = '$id_igreja' and month(data_nasc) = '$dataMes' and day(data_nasc) = '$dataDia' order by data_nasc asc, id desc");
-	$query_pastores = $pdo->query("SELECT * FROM pastores where igreja = '$id_igreja' and month(data_nasc) = '$dataMes' and day(data_nasc) = '$dataDia' order by data_nasc asc, id desc");
+	$query_pastores = $pdo->query("SELECT * FROM coordenadores where igreja = '$id_igreja' and month(data_nasc) = '$dataMes' and day(data_nasc) = '$dataDia' order by data_nasc asc, id desc");
 $res = $query->fetchAll(PDO::FETCH_ASSOC);
 	$total_reg = count($res);
 $res_pastores = $query_pastores->fetchAll(PDO::FETCH_ASSOC);
