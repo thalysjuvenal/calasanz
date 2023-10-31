@@ -319,7 +319,7 @@ $pagina = 'membros';
 					</div>
 
 
-					<div class="row">
+					<!--<div class="row">
 						<div class="col-md-3">
 							<div class="mb-3">
 								<label for="exampleFormControlInput1" class="form-label">Membresia</label>
@@ -354,7 +354,7 @@ $pagina = 'membros';
 						</div>
 
 
-					</div>
+					</div>-->
 
 
 
