@@ -1,4 +1,4 @@
-<?php 
+<?php
 require_once("../conexao.php");
 require_once("verificar.php");
 $pagina = 'coordenadores';
@@ -9,35 +9,36 @@ $pagina = 'coordenadores';
 </div>
 
 <div class="tabela bg-light">
-	<?php 
+	<?php
 
 	$query = $pdo->query("SELECT * FROM $pagina order by id desc");
 	$res = $query->fetchAll(PDO::FETCH_ASSOC);
 	$total_reg = count($res);
-	if($total_reg > 0){
+	if ($total_reg > 0) {
 
 		?>
 
 		<table id="example" class="table table-striped table-light table-hover my-4 my-4" style="width:100%">
-			<thead>			
+			<thead>
 				<tr>
 					<th>Nome</th>
 					<th>CPF</th>
 					<th class="esc">Email</th>
 					<th class="esc">Telefone</th>
 					<th class="esc">Igreja</th>
-					
+
 					<th class="esc">Foto</th>
-					
+
 					<th>Ações</th>
-				</tr>		
+				</tr>
 			</thead>
 			<tbody>
-				<?php 
-				for($i=0; $i < $total_reg; $i++){
-					foreach ($res[$i] as $key => $value){} 
+				<?php
+				for ($i = 0; $i < $total_reg; $i++) {
+					foreach ($res[$i] as $key => $value) {
+					}
 
-						$nome = $res[$i]['nome'];
+					$nome = $res[$i]['nome'];
 					$cpf = $res[$i]['cpf'];
 					$email = $res[$i]['email'];
 					$telefone = $res[$i]['telefone'];
@@ -49,13 +50,13 @@ $pagina = 'coordenadores';
 					$igreja = $res[$i]['igreja'];
 					$id = $res[$i]['id'];
 					//$prebenda = $res[$i]['prebenda'];
-
+			
 
 					$query_con = $pdo->query("SELECT * FROM igrejas where id = '$igreja'");
 					$res_con = $query_con->fetchAll(PDO::FETCH_ASSOC);
-					if(count($res_con) > 0){
+					if (count($res_con) > 0) {
 						$nome_ig = $res_con[0]['nome'];
-					}else{
+					} else {
 						$nome_ig = $nome_igreja_sistema;
 					}
 
@@ -65,29 +66,49 @@ $pagina = 'coordenadores';
 
 					$data_nascF = implode('/', array_reverse(explode('-', $data_nasc)));
 					$data_cadF = implode('/', array_reverse(explode('-', $data_cad)));
-					?>			
+					?>
 					<tr>
-						<td><?php echo $nome ?> <span class="text-danger"><?php if($prebenda > 0){echo '('.$prebenda.'%)';} ?></span></td>
-						<td><?php echo $cpf ?></td>
-						<td class="esc"><?php echo $email ?></td>
-						<td class="esc"><?php echo $telefone ?></td>
-						<td class="esc"><?php echo $nome_ig ?></td>
-						
-						<td class="esc"><img src="../img/membros/<?php echo $foto ?>" width="30px"></td>
-						
 						<td>
-							<a href="#" onclick="editar('<?php echo $id ?>', '<?php echo $nome ?>', '<?php echo $cpf ?>', '<?php echo $email ?>', '<?php echo $telefone ?>', '<?php echo $endereco ?>', '<?php echo $foto ?>', '<?php echo $data_nasc ?>', '<?php echo $igreja ?>', '<?php echo $nome_ig ?>', '<?php echo $prebenda ?>')" title="Editar Registro">	<i class="bi bi-pencil-square text-primary"></i> </a>
-
-							<a href="#" onclick="excluir('<?php echo $id ?>' , '<?php echo $nome ?>')" title="Excluir Registro">	<i class="bi bi-trash text-danger"></i> </a>
-							<a href="#" onclick="dados('<?php echo $nome ?>', '<?php echo $cpf ?>', '<?php echo $email ?>', '<?php echo $telefone ?>', '<?php echo $endereco ?>', '<?php echo $foto ?>', '<?php echo $data_nascF ?>', '<?php echo $data_cadF ?>', '<?php echo $nome_ig ?>', '<?php echo $prebenda ?>')" title="Ver Dados">	<i class="bi bi-info-square-fill text-primary"></i> </a>
-
-							<a href="#" onclick="obs('<?php echo $id ?>','<?php echo $nome ?>', '<?php echo $obs ?>')" title="Observações">	<i class="bi bi-chat-right-text text-secondary"></i> </a>
+							<?php echo $nome ?> <span class="text-danger">
+								<?php if ($prebenda > 0) {
+									echo '(' . $prebenda . '%)';
+								} ?>
+							</span>
 						</td>
-					</tr>	
-				<?php } ?>	
+						<td>
+							<?php echo $cpf ?>
+						</td>
+						<td class="esc">
+							<?php echo $email ?>
+						</td>
+						<td class="esc">
+							<?php echo $telefone ?>
+						</td>
+						<td class="esc">
+							<?php echo $nome_ig ?>
+						</td>
+
+						<td class="esc"><img src="../img/membros/<?php echo $foto ?>" width="30px"></td>
+
+						<td>
+							<a href="#"
+								onclick="editar('<?php echo $id ?>', '<?php echo $nome ?>', '<?php echo $cpf ?>', '<?php echo $email ?>', '<?php echo $telefone ?>', '<?php echo $endereco ?>', '<?php echo $foto ?>', '<?php echo $data_nasc ?>', '<?php echo $igreja ?>', '<?php echo $nome_ig ?>', '<?php echo $prebenda ?>')"
+								title="Editar Registro"> <i class="bi bi-pencil-square text-primary"></i> </a>
+
+							<a href="#" onclick="excluir('<?php echo $id ?>' , '<?php echo $nome ?>')" title="Excluir Registro">
+								<i class="bi bi-trash text-danger"></i> </a>
+							<a href="#"
+								onclick="dados('<?php echo $nome ?>', '<?php echo $cpf ?>', '<?php echo $email ?>', '<?php echo $telefone ?>', '<?php echo $endereco ?>', '<?php echo $foto ?>', '<?php echo $data_nascF ?>', '<?php echo $data_cadF ?>', '<?php echo $nome_ig ?>')"
+								title="Ver Dados"> <i class="bi bi-info-square-fill text-primary"></i> </a>
+
+							<a href="#" onclick="obs('<?php echo $id ?>','<?php echo $nome ?>', '<?php echo $obs ?>')"
+								title="Observações"> <i class="bi bi-chat-right-text text-secondary"></i> </a>
+						</td>
+					</tr>
+				<?php } ?>
 			</tbody>
 		</table>
-	<?php }else{
+	<?php } else {
 		echo 'Não Existem Dados Cadastrados';
 	} ?>
 </div>
@@ -106,45 +127,51 @@ $pagina = 'coordenadores';
 						<div class="col-md-3">
 							<div class="mb-3">
 								<label for="exampleFormControlInput1" class="form-label">Nome</label>
-								<input type="text" class="form-control" id="nome" name="nome" placeholder="Insira o Nome"  required>
+								<input type="text" class="form-control" id="nome" name="nome"
+									placeholder="Insira o Nome" required>
 							</div>
 						</div>
 						<div class="col-md-3">
 							<div class="mb-3">
 								<label for="exampleFormControlInput1" class="form-label">CPF</label>
-								<input type="text" class="form-control" id="cpf" name="cpf" placeholder="Insira o CPF"  required>
+								<input type="text" class="form-control" id="cpf" name="cpf" placeholder="Insira o CPF"
+									required>
 							</div>
 						</div>
 
 						<div class="col-md-3">
 							<div class="mb-3">
 								<label for="exampleFormControlInput1" class="form-label">Email</label>
-								<input type="email" class="form-control" id="email" name="email" placeholder="Insira o Email" required>
+								<input type="email" class="form-control" id="email" name="email"
+									placeholder="Insira o Email" required>
 							</div>
 						</div>
 
 						<div class="col-md-3">
 							<div class="mb-3">
 								<label for="exampleFormControlInput1" class="form-label">Data Nasc</label>
-								<input type="date" class="form-control" id="data_nasc" name="data_nasc" value="<?php echo date('Y-m-d') ?>" required>
+								<input type="date" class="form-control" id="data_nasc" name="data_nasc"
+									value="<?php echo date('Y-m-d') ?>" required>
 							</div>
 						</div>
 
 					</div>
 					<div class="row">
-						
+
 
 						<div class="col-md-3">
 							<div class="mb-3">
 								<label for="exampleFormControlInput1" class="form-label">Telefone</label>
-								<input type="text" class="form-control" id="telefone" name="telefone" placeholder="Insira o Telefone" required>
+								<input type="text" class="form-control" id="telefone" name="telefone"
+									placeholder="Insira o Telefone" required>
 							</div>
 						</div>
 
 						<div class="col-md-6">
 							<div class="mb-3">
 								<label for="exampleFormControlInput1" class="form-label">Endereço</label>
-								<input type="text" class="form-control" id="endereco" name="endereco" placeholder="Insira o Endereço">
+								<input type="text" class="form-control" id="endereco" name="endereco"
+									placeholder="Insira o Endereço">
 							</div>
 						</div>
 
@@ -163,124 +190,136 @@ $pagina = 'coordenadores';
 						<div class="col-md-4">
 							<div class="mb-3">
 								<label for="exampleFormControlInput1" class="form-label">Igreja</label>
-								<select class="form-control sel2" id="igreja" name="igreja" style="width:100%;" required>
-									<?php 
+								<select class="form-control sel2" id="igreja" name="igreja" style="width:100%;"
+									required>
+									<?php
 									$query = $pdo->query("SELECT * FROM igrejas order by matriz desc, nome asc");
 									$res = $query->fetchAll(PDO::FETCH_ASSOC);
 									$total_reg = count($res);
-									if($total_reg > 0){
+									if ($total_reg > 0) {
 
-										for($i=0; $i < $total_reg; $i++){
-											foreach ($res[$i] as $key => $value){} 
+										for ($i = 0; $i < $total_reg; $i++) {
+											foreach ($res[$i] as $key => $value) {
+											}
 
-												$nome_reg = $res[$i]['nome'];
-												$id_reg = $res[$i]['id'];
+											$nome_reg = $res[$i]['nome'];
+											$id_reg = $res[$i]['id'];
 											?>
-											<option value="<?php echo $id_reg ?>"><?php echo $nome_reg ?></option>
+											<option value="<?php echo $id_reg ?>">
+												<?php echo $nome_reg ?>
+											</option>
 
-										<?php }} ?>
-									</select>
-								</div>
-							</div>
-							<div class="col-md-5">
-								<div class="mb-3">
-									<label for="exampleFormControlInput1" class="form-label">Foto</label>
-									<input type="file" class="form-control-file" id="imagem" name="imagem" onChange="carregarImg();">
-								</div>
-							</div>
-							<div class="col-md-3">
-								<div id="divImg" class="mt-4">
-									<img src="../img/membros/sem-foto.jpg"  width="130px" id="target">									
-								</div>
+										<?php }
+									} ?>
+								</select>
 							</div>
 						</div>
-
-						<input type="hidden" id="id" name="id">
-
+						<div class="col-md-5">
+							<div class="mb-3">
+								<label for="exampleFormControlInput1" class="form-label">Foto</label>
+								<input type="file" class="form-control-file" id="imagem" name="imagem"
+									onChange="carregarImg();">
+							</div>
+						</div>
+						<div class="col-md-3">
+							<div id="divImg" class="mt-4">
+								<img src="../img/membros/sem-foto.jpg" width="130px" id="target">
+							</div>
+						</div>
 					</div>
-					<small><div align="center" id="mensagem"></div></small>
-					<div class="modal-footer">
-						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="btn-fechar">Fechar</button>
-						<button type="submit" class="btn btn-primary">Salvar</button>
-					</div>
-				</form>
-			</div>
+
+					<input type="hidden" id="id" name="id">
+
+				</div>
+				<small>
+					<div align="center" id="mensagem"></div>
+				</small>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
+						id="btn-fechar">Fechar</button>
+					<button type="submit" class="btn btn-primary">Salvar</button>
+				</div>
+			</form>
 		</div>
 	</div>
+</div>
 
 
 
 
 
-	<!-- Modal -->
-	<div class="modal fade" id="modalExcluir" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-		<div class="modal-dialog">
-			<div class="modal-content">
-				<div class="modal-header">
-					<h5 class="modal-title" id="exampleModalLabel"><span id="tituloModal">Excluir Registro</span></h5>
-					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-				</div>
-				<form id="form-excluir" method="post">
-					<div class="modal-body">
-
-						Deseja Realmente excluir este Registro: <span id="nome-excluido"></span>?
-
-						<small><div id="mensagem-excluir" align="center"></div></small>
-
-						<input type="hidden" class="form-control" name="id-excluir"  id="id-excluir">
-
-
-					</div>
-					<div class="modal-footer">
-						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="btn-fechar-excluir">Fechar</button>
-						<button type="submit" class="btn btn-danger">Excluir</button>
-					</div>
-				</form>
+<!-- Modal -->
+<div class="modal fade" id="modalExcluir" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="exampleModalLabel"><span id="tituloModal">Excluir Registro</span></h5>
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 			</div>
-		</div>
-	</div>
-
-
-
-	<div class="modal fade" id="modalDados" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-		<div class="modal-dialog">
-			<div class="modal-content">
-				<div class="modal-header">
-					<h5 class="modal-title" id="exampleModalLabel">Nome : <span id="nome-dados"></span></h5>
-					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-				</div>
-
+			<form id="form-excluir" method="post">
 				<div class="modal-body">
 
-					<span class=""><b>CPF:</b> <span id="cpf-dados"></span></span>
-					<hr style="margin:4px">
+					Deseja Realmente excluir este Registro: <span id="nome-excluido"></span>?
 
-					<span class=""><b>Email:</b> <span id="email-dados"></span></span>
-					<hr style="margin:4px">
+					<small>
+						<div id="mensagem-excluir" align="center"></div>
+					</small>
 
-					<span class=""><b>Telefone:</b> <span id="telefone-dados"></span></span>
-					<hr style="margin:4px">
-
-					<span class=""><b>Endereço:</b> <span id="endereco-dados"></span></span>
-					<hr style="margin:4px">
-
-					<span class=""><b>Data de Cadastro:</b> <span id="cadastro-dados"></span></span>
-					<hr style="margin:4px">
-
-					<span class=""><b>Data de Nascimento:</b> <span id="nasc-dados"></span></span>
-					<hr style="margin:4px">
-
-					<span class=""><b>Prebenda:</b> <span id="prebenda-dados"></span>%</span>
-					<hr style="margin:4px">
-
-					<span class=""><b>Igreja:</b> <span id="igreja-dados"></span></span>
-					<hr style="margin:4px">
-
-					<span class=""><img src="" id="foto-dados" width="200px"></span>
-					<hr style="margin:4px">
+					<input type="hidden" class="form-control" name="id-excluir" id="id-excluir">
 
 
 				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
+						id="btn-fechar-excluir">Fechar</button>
+					<button type="submit" class="btn btn-danger">Excluir</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+
+
+
+<div class="modal fade" id="modalDados" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="exampleModalLabel">Nome : <span id="nome-dados"></span></h5>
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			</div>
+
+			<div class="modal-body">
+
+				<span class=""><b>CPF:</b> <span id="cpf-dados"></span></span>
+				<hr style="margin:4px">
+
+				<span class=""><b>Email:</b> <span id="email-dados"></span></span>
+				<hr style="margin:4px">
+
+				<span class=""><b>Telefone:</b> <span id="telefone-dados"></span></span>
+				<hr style="margin:4px">
+
+				<span class=""><b>Endereço:</b> <span id="endereco-dados"></span></span>
+				<hr style="margin:4px">
+
+				<span class=""><b>Data de Cadastro:</b> <span id="cadastro-dados"></span></span>
+				<hr style="margin:4px">
+
+				<span class=""><b>Data de Nascimento:</b> <span id="nasc-dados"></span></span>
+				<hr style="margin:4px">
+
+				<span class=""><b>Prebenda:</b> <span id="prebenda-dados"></span>%</span>
+				<hr style="margin:4px">
+
+				<span class=""><b>Igreja:</b> <span id="igreja-dados"></span></span>
+				<hr style="margin:4px">
+
+				<span class=""><img src="" id="foto-dados" width="200px"></span>
+				<hr style="margin:4px">
+
+
+			</div>
 
 			</form>
 		</div>
@@ -297,27 +336,33 @@ $pagina = 'coordenadores';
 	<div class="modal-dialog modal-lg">
 		<div class="modal-content">
 			<div class="modal-header">
-				<h5 class="modal-title" id="exampleModalLabel"><span id="tituloModal">Observações - <span id="nome-obs"></span></span></h5>
+				<h5 class="modal-title" id="exampleModalLabel"><span id="tituloModal">Observações - <span
+							id="nome-obs"></span></span></h5>
 				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 			</div>
 			<form id="form-obs" method="post">
 				<div class="modal-body">
 
 					<div class="mb-3">
-						<label for="exampleFormControlInput1" class="form-label">Observações (Máximo 500 Caracteres)</label>
-						<textarea class="form-control" id="obs" name="obs" maxlength="500" style="height:200px"></textarea>
+						<label for="exampleFormControlInput1" class="form-label">Observações (Máximo 500
+							Caracteres)</label>
+						<textarea class="form-control" id="obs" name="obs" maxlength="500"
+							style="height:200px"></textarea>
 					</div>
 
-					
 
-					<small><div id="mensagem-obs" align="center"></div></small>
 
-					<input type="hidden" class="form-control" name="id-obs"  id="id-obs">
+					<small>
+						<div id="mensagem-obs" align="center"></div>
+					</small>
+
+					<input type="hidden" class="form-control" name="id-obs" id="id-obs">
 
 
 				</div>
 				<div class="modal-footer">
-					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="btn-fechar-obs">Fechar</button>
+					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
+						id="btn-fechar-obs">Fechar</button>
 					<button type="submit" class="btn btn-primary">Salvar</button>
 				</div>
 			</form>
@@ -328,13 +373,13 @@ $pagina = 'coordenadores';
 
 
 
-<script type="text/javascript">var pag = "<?=$pagina?>"</script>
+<script type="text/javascript">var pag = "<?= $pagina ?>"</script>
 <script src="../js/ajax.js"></script>
 
 
 <script type="text/javascript">
 
-	function editar(id, nome, cpf, email, telefone, endereco, foto, data_nasc, igreja, nome_ig, prebenda){
+	function editar(id, nome, cpf, email, telefone, endereco, foto, data_nasc, igreja, nome_ig, prebenda) {
 		$('#id').val(id);
 		$('#nome').val(nome);
 		$('#email').val(email);
@@ -344,18 +389,18 @@ $pagina = 'coordenadores';
 		$('#data_nasc').val(data_nasc);
 		$('#prebenda').val(prebenda);
 		$('#target').attr('src', '../img/membros/' + foto);
-		
+
 		$('#igreja').val(igreja).change();
-		
+
 		$('#tituloModal').text('Editar Registro');
-		var myModal = new bootstrap.Modal(document.getElementById('modalForm'), {		});
+		var myModal = new bootstrap.Modal(document.getElementById('modalForm'), {});
 		myModal.show();
 		$('#mensagem').text('');
 	}
 
 
 
-	function dados(nome, cpf, email, telefone, endereco, foto, data_nasc, data_cad, igreja, prebenda){
+	function dados(nome, cpf, email, telefone, endereco, foto, data_nasc, data_cad, igreja, prebenda) {
 
 		$('#nome-dados').text(nome);
 		$('#cpf-dados').text(cpf);
@@ -367,45 +412,45 @@ $pagina = 'coordenadores';
 		$('#igreja-dados').text(igreja);
 		$('#prebenda-dados').text(prebenda);
 		$('#foto-dados').attr('src', '../img/membros/' + foto);
-		
-		
-		var myModal = new bootstrap.Modal(document.getElementById('modalDados'), {		});
+
+
+		var myModal = new bootstrap.Modal(document.getElementById('modalDados'), {});
 		myModal.show();
 		$('#mensagem').text('');
 	}
 
 
 
-	function obs(id, nome, obs){
+	function obs(id, nome, obs) {
 		console.log(obs)
-		
-		for (let letra of obs){  				
-			if (letra === '+'){
+
+		for (let letra of obs) {
+			if (letra === '+') {
 				obs = obs.replace(' +  + ', '\n')
-			}			
+			}
 		}
 
 
 		$('#nome-obs').text(nome);
 		$('#id-obs').val(id);
 		$('#obs').val(obs);
-		
 
-		
-		var myModal = new bootstrap.Modal(document.getElementById('modalObs'), {		});
+
+
+		var myModal = new bootstrap.Modal(document.getElementById('modalObs'), {});
 		myModal.show();
 		$('#mensagem-obs').text('');
 	}
 
-	function limpar(){
+	function limpar() {
 		$('#id').val('');
-		$('#nome').val('');		
+		$('#nome').val('');
 		$('#email').val('');
 		$('#cpf').val('');
 		$('#telefone').val('');
 		$('#endereco').val('');
 		$('#data_nasc').val('');
-		
+
 		document.getElementById("igreja").options.selectedIndex = 0;
 		$('#igreja').val($('#igreja').val()).change();
 
@@ -420,7 +465,7 @@ $pagina = 'coordenadores';
 <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 
 <script>
-	$(document).ready(function() {
+	$(document).ready(function () {
 		$('.sel2').select2({
 			//placeholder: 'Selecione um Cliente',
 			dropdownParent: $('#modalForm')
@@ -431,15 +476,15 @@ $pagina = 'coordenadores';
 <style type="text/css">
 	.select2-selection__rendered {
 		line-height: 36px !important;
-		font-size:16px !important;
-		color:#666666 !important;
-		
+		font-size: 16px !important;
+		color: #666666 !important;
+
 	}
 
 	.select2-selection {
 		height: 36px !important;
-		font-size:16px !important;
-		color:#666666 !important;
-		
+		font-size: 16px !important;
+		color: #666666 !important;
+
 	}
-</style>  
+</style>

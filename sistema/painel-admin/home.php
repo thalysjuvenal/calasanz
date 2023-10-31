@@ -1,4 +1,4 @@
-<?php 
+<?php
 require_once("../conexao.php");
 $membrosSede = 0;
 $membrosCadastrados = 0;
@@ -24,12 +24,12 @@ $membrosCadastrados = @count($res_m);
 
 //VERIFICAR DATA PARA EXCLUSÃO DE LOGS
 $data_atual = date('Y-m-d');
-$data_limpeza = date('Y-m-d', strtotime("-$dias_excluir_logs days",strtotime($data_atual)));
+$data_limpeza = date('Y-m-d', strtotime("-$dias_excluir_logs days", strtotime($data_atual)));
 $pdo->query("DELETE FROM logs where data < '$data_limpeza'");
 ?>
 
 
-<div class="container-fluid " >
+<div class="container-fluid ">
 	<section id="minimal-statistics" style="margin-right:20px">
 		<div class="row mb-2">
 			<div class="col-12 mt-3 mb-1">
@@ -43,7 +43,7 @@ $pdo->query("DELETE FROM logs where data < '$data_limpeza'");
 
 		<div class="row mb-4">
 
-			<div class="col-xl-3 col-sm-6 col-12 linkcard"> 
+			<div class="col-xl-3 col-sm-6 col-12 linkcard">
 				<a href="index.php?pag=igrejas">
 					<div class="card">
 						<div class="card-content">
@@ -53,7 +53,9 @@ $pdo->query("DELETE FROM logs where data < '$data_limpeza'");
 										<i class="bi bi-house-door-fill text-success fs-1 float-start"></i>
 									</div>
 									<div class="col-9 text-end">
-										<h3> <span class="text-success"><?php echo @$igrejasCadastradas ?></span></h3>
+										<h3> <span class="text-success">
+												<?php echo @$igrejasCadastradas ?>
+											</span></h3>
 										<span class="textocinzaescuro">Igrejas Cadastradas</span>
 									</div>
 								</div>
@@ -63,10 +65,10 @@ $pdo->query("DELETE FROM logs where data < '$data_limpeza'");
 				</a>
 			</div>
 
-			
 
 
-			<div class="col-xl-3 col-sm-6 col-12 linkcard"> 
+
+			<div class="col-xl-3 col-sm-6 col-12 linkcard">
 				<a href="index.php?pag=pastores">
 					<div class="card">
 						<div class="card-content">
@@ -76,7 +78,9 @@ $pdo->query("DELETE FROM logs where data < '$data_limpeza'");
 										<i class="bi bi-people text-dark fs-1 float-start"></i>
 									</div>
 									<div class="col-9 text-end">
-										<h3> <span class="text-dark"><?php echo @$pastoresCadastrados ?></span></h3>
+										<h3> <span class="text-dark">
+												<?php echo @$pastoresCadastrados ?>
+											</span></h3>
 										<span class="textocinzaescuro">Coordenadores Cadastrados</span>
 									</div>
 								</div>
@@ -87,7 +91,7 @@ $pdo->query("DELETE FROM logs where data < '$data_limpeza'");
 			</div>
 
 
-			<div class="col-xl-3 col-sm-6 col-12 linkcard"> 
+			<div class="col-xl-3 col-sm-6 col-12 linkcard">
 				<a href="#">
 					<div class="card">
 						<div class="card-content">
@@ -97,7 +101,9 @@ $pdo->query("DELETE FROM logs where data < '$data_limpeza'");
 										<i class="bi bi-person-fill text-primary fs-1 float-start"></i>
 									</div>
 									<div class="col-9 text-end">
-										<h3> <span class="text-primary"><?php echo @$membrosSede ?></span></h3>
+										<h3> <span class="text-primary">
+												<?php echo @$membrosSede ?>
+											</span></h3>
 										<span class="textocinzaescuro">Membros da Matriz</span>
 									</div>
 								</div>
@@ -108,7 +114,7 @@ $pdo->query("DELETE FROM logs where data < '$data_limpeza'");
 			</div>
 
 
-			<div class="col-xl-3 col-sm-6 col-12 linkcard"> 
+			<div class="col-xl-3 col-sm-6 col-12 linkcard">
 				<a href="#">
 					<div class="card">
 						<div class="card-content">
@@ -118,14 +124,16 @@ $pdo->query("DELETE FROM logs where data < '$data_limpeza'");
 										<i class="bi bi-people-fill text-danger fs-1 float-start"></i>
 									</div>
 									<div class="col-9 text-end">
-										<h3> <span class="text-danger"><?php echo @$membrosCadastrados ?></span></h3>
+										<h3> <span class="text-danger">
+												<?php echo @$membrosCadastrados ?>
+											</span></h3>
 										<span class="textocinzaescuro">Total de Membros</span>
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
-				</div>
+			</div>
 			</a>
 		</div>
 
@@ -136,31 +144,33 @@ $pdo->query("DELETE FROM logs where data < '$data_limpeza'");
 	</section>
 
 
-	<div class="text-xs font-weight-bold text-secondary text-uppercase mt-4"><small>IGREJAS - SEDE E FILIAIS</small></div>
-	<hr> 
+	<div class="text-xs font-weight-bold text-secondary text-uppercase mt-4"><small>IGREJAS - SEDE E FILIAIS</small>
+	</div>
+	<hr>
 
 	<div class="row" style="margin-right:10px">
 
-		<?php 
+		<?php
 
 		$query = $pdo->query("SELECT * FROM igrejas order by matriz desc, nome asc");
 		$res = $query->fetchAll(PDO::FETCH_ASSOC);
 		$total_reg = count($res);
 
-		for($i=0; $i < $total_reg; $i++){
-			foreach ($res[$i] as $key => $value){} 
+		for ($i = 0; $i < $total_reg; $i++) {
+			foreach ($res[$i] as $key => $value) {
+			}
 
-				$nome = $res[$i]['nome'];
-					//$pastor = $res[$i]['pastor'];
+			$nome = $res[$i]['nome'];
+			//$pastor = $res[$i]['pastor'];
 			$imagem = $res[$i]['imagem'];
 			$matriz = $res[$i]['matriz'];
 			$pastor = $res[$i]['pastor'];
 			$id_ig = $res[$i]['id'];
 
-			if($matriz == 'Sim'){
+			if ($matriz == 'Sim') {
 				$bordacard = 'bordacardsede';
 				$classe = 'text-danger';
-			}else{
+			} else {
 				$bordacard = 'bordacard';
 				$classe = 'text-primary';
 			}
@@ -172,9 +182,9 @@ $pdo->query("DELETE FROM logs where data < '$data_limpeza'");
 
 			$query_con = $pdo->query("SELECT * FROM pastores where id = '$pastor'");
 			$res_con = $query_con->fetchAll(PDO::FETCH_ASSOC);
-			if(count($res_con) > 0){
+			if (count($res_con) > 0) {
 				$nome_p = $res_con[0]['nome'];
-			}else{
+			} else {
 				$nome_p = 'Não Definido';
 			}
 
@@ -186,12 +196,18 @@ $pdo->query("DELETE FROM logs where data < '$data_limpeza'");
 						<div class="card-body">
 							<div class="row no-gutters align-items-center">
 								<div class="col mr-2">
-									<div class="text-xs font-weight-bold <?php echo $classe ?> text-uppercase titulocard"><?php echo $nome ?></div>
-									<div class="text-xs text-secondary subtitulocard"><?php echo mb_strtoupper($nome_p) ?> </div>
+									<div class="text-xs font-weight-bold <?php echo $classe ?> text-uppercase titulocard">
+										<?php echo $nome ?>
+									</div>
+									<div class="text-xs text-secondary subtitulocard">
+										<?php echo mb_strtoupper($nome_p) ?>
+									</div>
 								</div>
 								<div class="col-auto" align="center">
 									<img src="../img/igrejas/<?php echo $imagem ?>" width="50px" height="50px"><br>
-									<span class="text-xs totaiscard <?php echo $classe ?>"><?php echo @$membrosCad ?> MEMBROS</span>
+									<span class="text-xs totaiscard <?php echo $classe ?>">
+										<?php echo @$membrosCad ?> MEMBROS
+									</span>
 								</div>
 							</div>
 						</div>

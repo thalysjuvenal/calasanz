@@ -1,4 +1,4 @@
-<?php 
+<?php
 require_once("../conexao.php");
 require_once("verificar.php");
 $pagina = 'administradores';
@@ -9,57 +9,71 @@ $pagina = 'administradores';
 </div>
 
 <div class="tabela bg-light">
-	<?php 
+	<?php
 
 	$query = $pdo->query("SELECT * FROM $pagina order by id desc");
 	$res = $query->fetchAll(PDO::FETCH_ASSOC);
 	$total_reg = count($res);
-	if($total_reg > 0){
+	if ($total_reg > 0) {
 
 		?>
 
 		<table id="example" class="table table-striped table-light table-hover my-4 my-4" style="width:100%">
-			<thead>			
+			<thead>
 				<tr>
 					<th>Nome</th>
 					<th>CPF</th>
 					<th class="esc">Email</th>
 					<th class="esc">Telefone</th>
 					<th class="esc">Foto</th>
-					
+
 					<th>Ações</th>
-				</tr>		
+				</tr>
 			</thead>
 			<tbody>
-				<?php 
-				for($i=0; $i < $total_reg; $i++){
-					foreach ($res[$i] as $key => $value){} 
+				<?php
+				for ($i = 0; $i < $total_reg; $i++) {
+					foreach ($res[$i] as $key => $value) {
+					}
 
-						$nome = $res[$i]['nome'];
+					$nome = $res[$i]['nome'];
 					$cpf = $res[$i]['cpf'];
 					$email = $res[$i]['email'];
 					$telefone = $res[$i]['telefone'];
 					$endereco = $res[$i]['endereco'];
 					$foto = $res[$i]['foto'];
 					$id = $res[$i]['id'];
-					?>			
+					?>
 					<tr>
-						<td><?php echo $nome ?></td>
-						<td><?php echo $cpf ?></td>
-						<td class="esc"><?php echo $email ?></td>
-						<td class="esc"><?php echo $telefone ?></td>
-						<td class="esc"><img src="../img/membros/<?php echo $foto ?>" width="30px"></td>
-						
 						<td>
-							<a href="#" onclick="editar('<?php echo $id ?>', '<?php echo $nome ?>', '<?php echo $cpf ?>', '<?php echo $email ?>', '<?php echo $telefone ?>', '<?php echo $endereco ?>', '<?php echo $foto ?>')" title="Editar Registro">	<i class="bi bi-pencil-square text-primary"></i> </a>
-							<a href="#" onclick="excluir('<?php echo $id ?>' , '<?php echo $nome ?>')" title="Excluir Registro">	<i class="bi bi-trash text-danger"></i> </a>
-							<a href="#" onclick="dados('<?php echo $nome ?>', '<?php echo $cpf ?>', '<?php echo $email ?>', '<?php echo $telefone ?>', '<?php echo $endereco ?>', '<?php echo $foto ?>')" title="Ver Dados">	<i class="bi bi-info-square-fill text-primary"></i> </a>
+							<?php echo $nome ?>
 						</td>
-					</tr>	
-				<?php } ?>	
+						<td>
+							<?php echo $cpf ?>
+						</td>
+						<td class="esc">
+							<?php echo $email ?>
+						</td>
+						<td class="esc">
+							<?php echo $telefone ?>
+						</td>
+						<td class="esc"><img src="../img/membros/<?php echo $foto ?>" width="30px"></td>
+
+						<td>
+							<a href="#"
+								onclick="editar('<?php echo $id ?>', '<?php echo $nome ?>', '<?php echo $cpf ?>', '<?php echo $email ?>', '<?php echo $telefone ?>', '<?php echo $endereco ?>', '<?php echo $foto ?>')"
+								title="Editar Registro"> <i class="bi bi-pencil-square text-primary"></i> </a>
+							<a href="#" onclick="excluir('<?php echo $id ?>' , '<?php echo $nome ?>')" title="Excluir Registro">
+								<i class="bi bi-trash text-danger"></i> </a>
+							<a href="#"
+								onclick="dados('<?php echo $nome ?>', '<?php echo $cpf ?>', '<?php echo $email ?>', '<?php echo $telefone ?>', '<?php echo $endereco ?>', '<?php echo $foto ?>')"
+								title="Ver Dados"> <i class="bi bi-info-square-fill text-primary"></i> </a>
+						</td>
+					</tr>
+				<?php } ?>
 			</tbody>
 		</table>
-	<?php }else{
+	<?php } else {
 		echo 'Não Existem Dados Cadastrados';
 	} ?>
 </div>
@@ -78,38 +92,43 @@ $pagina = 'administradores';
 						<div class="col-md-4">
 							<div class="mb-3">
 								<label for="exampleFormControlInput1" class="form-label">Nome</label>
-								<input type="text" class="form-control" id="nome" name="nome" placeholder="Insira o Nome" required>
+								<input type="text" class="form-control" id="nome" name="nome"
+									placeholder="Insira o Nome" required>
 							</div>
 						</div>
 						<div class="col-md-4">
 							<div class="mb-3">
 								<label for="exampleFormControlInput1" class="form-label">CPF</label>
-								<input type="text" class="form-control" id="cpf" name="cpf" placeholder="Insira o CPF"  required>
+								<input type="text" class="form-control" id="cpf" name="cpf" placeholder="Insira o CPF"
+									required>
 							</div>
 						</div>
 
 						<div class="col-md-4">
 							<div class="mb-3">
 								<label for="exampleFormControlInput1" class="form-label">Email</label>
-								<input type="email" class="form-control" id="email" name="email" placeholder="Insira o Email" required>
+								<input type="email" class="form-control" id="email" name="email"
+									placeholder="Insira o Email" required>
 							</div>
 						</div>
 
 					</div>
 					<div class="row">
-						
+
 
 						<div class="col-md-3">
 							<div class="mb-3">
 								<label for="exampleFormControlInput1" class="form-label">Telefone</label>
-								<input type="text" class="form-control" id="telefone" name="telefone" placeholder="Insira o Telefone" required>
+								<input type="text" class="form-control" id="telefone" name="telefone"
+									placeholder="Insira o Telefone" required>
 							</div>
 						</div>
 
 						<div class="col-md-9">
 							<div class="mb-3">
 								<label for="exampleFormControlInput1" class="form-label">Endereço</label>
-								<input type="text" class="form-control" id="endereco" name="endereco" placeholder="Insira o Endereço">
+								<input type="text" class="form-control" id="endereco" name="endereco"
+									placeholder="Insira o Endereço">
 							</div>
 						</div>
 
@@ -120,12 +139,13 @@ $pagina = 'administradores';
 						<div class="col-md-6">
 							<div class="mb-3">
 								<label for="exampleFormControlInput1" class="form-label">Foto</label>
-								<input type="file" class="form-control-file" id="imagem" name="imagem" onChange="carregarImg();">
+								<input type="file" class="form-control-file" id="imagem" name="imagem"
+									onChange="carregarImg();">
 							</div>
 						</div>
 						<div class="col-md-6">
-						<div id="divImg" class="mt-4">
-								<img src="../img/membros/sem-foto.jpg"  width="130px" id="target">									
+							<div id="divImg" class="mt-4">
+								<img src="../img/membros/sem-foto.jpg" width="130px" id="target">
 							</div>
 						</div>
 					</div>
@@ -133,9 +153,12 @@ $pagina = 'administradores';
 					<input type="hidden" id="id" name="id">
 
 				</div>
-				<small><div align="center" id="mensagem"></div></small>
+				<small>
+					<div align="center" id="mensagem"></div>
+				</small>
 				<div class="modal-footer">
-					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="btn-fechar">Fechar</button>
+					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
+						id="btn-fechar">Fechar</button>
 					<button type="submit" class="btn btn-primary">Salvar</button>
 				</div>
 			</form>
@@ -160,14 +183,17 @@ $pagina = 'administradores';
 
 					Deseja Realmente excluir este Registro: <span id="nome-excluido"></span>?
 
-					<small><div id="mensagem-excluir" align="center"></div></small>
+					<small>
+						<div id="mensagem-excluir" align="center"></div>
+					</small>
 
-					<input type="hidden" class="form-control" name="id-excluir"  id="id-excluir">
+					<input type="hidden" class="form-control" name="id-excluir" id="id-excluir">
 
 
 				</div>
 				<div class="modal-footer">
-					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="btn-fechar-excluir">Fechar</button>
+					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
+						id="btn-fechar-excluir">Fechar</button>
 					<button type="submit" class="btn btn-danger">Excluir</button>
 				</div>
 			</form>
@@ -184,7 +210,7 @@ $pagina = 'administradores';
 				<h5 class="modal-title" id="exampleModalLabel">Nome : <span id="nome-dados"></span></h5>
 				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 			</div>
-			
+
 			<div class="modal-body">
 
 				<span class=""><b>CPF:</b> <span id="cpf-dados"></span></span>
@@ -205,20 +231,20 @@ $pagina = 'administradores';
 
 			</div>
 
-		</form>
+			</form>
+		</div>
 	</div>
 </div>
-</div>
 
 
 
-<script type="text/javascript">var pag = "<?=$pagina?>"</script>
+<script type="text/javascript">var pag = "<?= $pagina ?>"</script>
 <script src="../js/ajax.js"></script>
 
 
 <script type="text/javascript">
 
-	function editar(id, nome, cpf, email, telefone, endereco, foto){
+	function editar(id, nome, cpf, email, telefone, endereco, foto) {
 		$('#id').val(id);
 		$('#nome').val(nome);
 		$('#email').val(email);
@@ -226,16 +252,16 @@ $pagina = 'administradores';
 		$('#telefone').val(telefone);
 		$('#endereco').val(endereco);
 		$('#target').attr('src', '../img/membros/' + foto);
-		
+
 		$('#tituloModal').text('Editar Registro');
-		var myModal = new bootstrap.Modal(document.getElementById('modalForm'), {		});
+		var myModal = new bootstrap.Modal(document.getElementById('modalForm'), {});
 		myModal.show();
 		$('#mensagem').text('');
 	}
 
 
 
-	function dados(nome, cpf, email, telefone, endereco, foto){
+	function dados(nome, cpf, email, telefone, endereco, foto) {
 
 		$('#nome-dados').text(nome);
 		$('#cpf-dados').text(cpf);
@@ -243,20 +269,20 @@ $pagina = 'administradores';
 		$('#telefone-dados').text(telefone);
 		$('#endereco-dados').text(endereco);
 		$('#foto-dados').attr('src', '../img/membros/' + foto);
-		
-		var myModal = new bootstrap.Modal(document.getElementById('modalDados'), {		});
+
+		var myModal = new bootstrap.Modal(document.getElementById('modalDados'), {});
 		myModal.show();
 		$('#mensagem').text('');
 	}
 
 
-	function limpar(){
+	function limpar() {
 		$('#id').val('');
-		$('#nome').val('');		
+		$('#nome').val('');
 		$('#email').val('');
 		$('#cpf').val('');
 		$('#telefone').val('');
-		$('#endereco').val('');	
+		$('#endereco').val('');
 		$('#target').attr('src', '../img/membros/sem-foto.jpg');
 	}
 
