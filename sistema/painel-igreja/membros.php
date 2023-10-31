@@ -387,13 +387,13 @@ $pagina = 'membros';
 
 					<div class="row">
 
-						<div class="col-md-5">
+						<!--<div class="col-md-5">
 							<div class="mb-3">
 								<label for="exampleFormControlInput1" class="form-label">Foto</label>
 								<input type="file" class="form-control-file" id="imagem" name="imagem"
 									onChange="carregarImg();">
 							</div>
-						</div>
+						</div>-->
 						<div class="col-md-2">
 							<div id="divImg" class="mt-4">
 								<img src="../img/membros/sem-foto.jpg" width="100px" id="target">
