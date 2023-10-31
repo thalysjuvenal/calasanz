@@ -92,7 +92,7 @@ $pagina = 'coordenadores';
 
 						<td>
 							<a href="#"
-								onclick="editar('<?php echo $id ?>', '<?php echo $nome ?>', '<?php echo $cpf ?>', '<?php echo $email ?>', '<?php echo $telefone ?>', '<?php echo $endereco ?>', '<?php echo $foto ?>', '<?php echo $data_nasc ?>', '<?php echo $igreja ?>', '<?php echo $nome_ig ?>', '<?php echo $prebenda ?>')"
+								onclick="editar('<?php echo $id ?>', '<?php echo $nome ?>', '<?php echo $cpf ?>', '<?php echo $email ?>', '<?php echo $telefone ?>', '<?php echo $endereco ?>', '<?php echo $foto ?>', '<?php echo $data_nasc ?>', '<?php echo $igreja ?>', '<?php echo $nome_ig ?>')"
 								title="Editar Registro"> <i class="bi bi-pencil-square text-primary"></i> </a>
 
 							<a href="#" onclick="excluir('<?php echo $id ?>' , '<?php echo $nome ?>')" title="Excluir Registro">
@@ -309,8 +309,8 @@ $pagina = 'coordenadores';
 				<span class=""><b>Data de Nascimento:</b> <span id="nasc-dados"></span></span>
 				<hr style="margin:4px">
 
-				<span class=""><b>Prebenda:</b> <span id="prebenda-dados"></span>%</span>
-				<hr style="margin:4px">
+				<!--<span class=""><b>Prebenda:</b> <span id="prebenda-dados"></span>%</span>
+				<hr style="margin:4px">-->
 
 				<span class=""><b>Igreja:</b> <span id="igreja-dados"></span></span>
 				<hr style="margin:4px">
