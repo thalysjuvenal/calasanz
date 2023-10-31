@@ -50,7 +50,7 @@ if(@$_GET['filtrar'] == "dia"){
 					<th>Data Nascimento</th>
 					<th class="esc">Email</th>
 					<th class="esc">Telefone</th>
-					<th class="esc">Cargo</th>
+					<!--<th class="esc">Cargo</th>-->
 					<th class="esc">Foto</th>
 					<th class="d-none">Ativo</th>
 					
