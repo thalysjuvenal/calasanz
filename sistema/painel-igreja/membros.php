@@ -296,12 +296,12 @@ $pagina = 'membros';
 					</div>
 
 					<div class="row">
-						<!--<div class="col-md-3">
+						<div class="col-md-3">
 							<div class="mb-3">
 								<label for="exampleFormControlInput1" class="form-label">Data Batismo</label>
 								<input type="date" class="form-control" id="data_bat" name="data_bat">
 							</div>
-						</div>-->
+						</div>
 
 
 
@@ -315,7 +315,7 @@ $pagina = 'membros';
 					</div>
 
 
-					<!--<div class="row">
+					<div class="row">
 						<div class="col-md-3">
 							<div class="mb-3">
 								<label for="exampleFormControlInput1" class="form-label">Membresia</label>
@@ -400,7 +400,7 @@ $pagina = 'membros';
 
 
 
-					</div>-->
+					</div>
 
 
 
