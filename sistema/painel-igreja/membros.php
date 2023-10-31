@@ -11,7 +11,7 @@ $pagina = 'membros';
 <div class="tabela bg-light">
 	<?php
 
-	$query = $pdo->query("SELECT * FROM $pagina where igreja = '$id_igreja' order by id desc");
+	$query = $pdo->query("SELECT * FROM $pagina where igreja = '$id_igreja' order by id ASC");
 	$res = $query->fetchAll(PDO::FETCH_ASSOC);
 	$total_reg = count($res);
 	if ($total_reg > 0) {
