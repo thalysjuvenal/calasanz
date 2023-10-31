@@ -5,7 +5,7 @@ $pagina = 'administradores';
 ?>
 
 <div class="col-md-12 my-3">
-	<a href="#" onclick="inserir()" type="button" class="btn btn-dark btn-sm">Novo Bispo</a>
+	<a href="#" onclick="inserir()" type="button" class="btn btn-dark btn-sm">Novo Administrador</a>
 </div>
 
 <div class="tabela bg-light">
