@@ -256,7 +256,7 @@ $pagina = 'membros';
 
 
 						<div class="col-md-3">
-							<div class="mb-3">
+							<!--<div class="mb-3">
 								<label for="exampleFormControlInput1" class="form-label">Cargo Ministerial</label>
 								<select class="form-control sel2" id="cargo" name="cargo" style="width:100%;">
 									<?php
@@ -279,19 +279,19 @@ $pagina = 'membros';
 										<?php }
 									} ?>
 								</select>
-							</div>
+							</div>-->
 
 						</div>
 
 
 						<div class="col-md-3">
-							<!--<div class="mb-3">
+							<div class="mb-3">
 								<label for="exampleFormControlInput1" class="form-label">Estado Cívil</label>
 								<select class="form-control sel2" id="estado" name="estado" style="width:100%;">
 									<option value="Solteiro">Solteiro</option>
 									<option value="Casado">Casado</option>
 								</select>
-							</div>-->
+							</div>
 
 						</div>
 
