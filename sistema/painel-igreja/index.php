@@ -177,9 +177,9 @@ if ($pag == "") {
 					</a>
 					<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
 
-						<li><a class="dropdown-item" href="index.php?pag=pagar">Contas à Pagar</a></li>
+						<!--<li><a class="dropdown-item" href="index.php?pag=pagar">Contas à Pagar</a></li>-->
 
-						<li><a class="dropdown-item" href="index.php?pag=receber">Contas à Receber</a></li>
+						<!--<li><a class="dropdown-item" href="index.php?pag=receber">Contas à Receber</a></li>-->
 
 						<li><a class="dropdown-item" href="index.php?pag=dizimos">Dízimos</a></li>
 
