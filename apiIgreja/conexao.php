@@ -10,10 +10,10 @@ header('Content-Type: application/json; charset=utf-8');
 date_default_timezone_set('America/Sao_Paulo');
 
 //dados do banco no servidor local
-$banco = "hugocu75_igreja";
-$servidor = "sh-pro24.hostgator.com.br";
-$usuario = "hugocu75_igreja";
-$senha = "hugoigreja";
+$banco = "u131870882_calasanzs";
+$servidor = "localhost";
+$usuario = "u131870882_calasanzs";
+$senha = "Tg@13062020";
 
 try {
 	$pdo = new PDO("mysql:dbname=$banco; host=$host", "$usuario", "$senha");
