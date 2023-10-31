@@ -394,11 +394,11 @@ $pagina = 'membros';
 									onChange="carregarImg();">
 							</div>
 						</div>-->
-						<div class="col-md-2">
+						<!--<div class="col-md-2">
 							<div id="divImg" class="mt-4">
 								<img src="../img/membros/sem-foto.jpg" width="100px" id="target">
 							</div>
-						</div>
+						</div>-->
 
 
 
