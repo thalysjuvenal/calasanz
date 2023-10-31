@@ -163,14 +163,14 @@ $pagina = 'membros';
 									<i class="bi bi-whatsapp text-success"></i></a>
 
 
-								<a href="../rel/relCarteirinha.php?id=<?php echo $id ?>" title="Gerar Carteirinha"
+								<!--<a href="../rel/relCarteirinha.php?id=<?php echo $id ?>" title="Gerar Carteirinha"
 									target="_blank">
-									<i class="bi bi-person-badge-fill text-primary"></i></a>
+									<i class="bi bi-person-badge-fill text-primary"></i></a>-->
 
 
-								<a href="#" onclick="modalTransf('<?php echo $id ?>', '<?php echo $nome ?>')"
+								<!--<a href="#" onclick="modalTransf('<?php echo $id ?>', '<?php echo $nome ?>')"
 									title="Carta de Recomendação">
-									<i class="bi bi-clipboard-x text-danger"></i></a>
+									<i class="bi bi-clipboard-x text-danger"></i></a>-->
 
 
 								<a href="../rel/relBatismo.php?id=<?php echo $id ?>" title="Certificado de Batismo"
