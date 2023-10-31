@@ -21,6 +21,7 @@ $pagina = 'membros';
 		<table id="example" class="table table-striped table-light table-hover my-4 my-4" style="width:100%">
 			<thead>
 				<tr>
+					<th>ID</th>
 					<th>Nome</th>
 					<th>CPF</th>
 					<th class="esc">Email</th>
