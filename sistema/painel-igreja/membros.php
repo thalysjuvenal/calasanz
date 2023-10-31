@@ -255,11 +255,11 @@ $pagina = 'membros';
 						</div>
 
 
-						<div class="col-md-3">
+						<!--<div class="col-md-3">
 							<div class="mb-3">
 								<label for="exampleFormControlInput1" class="form-label">Cargo Ministerial</label>
 								<select class="form-control sel2" id="cargo" name="cargo" style="width:100%;">
-									<?php
+									<//?php
 									$query = $pdo->query("SELECT * FROM cargos order by id asc");
 									$res = $query->fetchAll(PDO::FETCH_ASSOC);
 									$total_reg = count($res);
@@ -272,19 +272,19 @@ $pagina = 'membros';
 											$nome_reg = $res[$i]['nome'];
 											$id_reg = $res[$i]['id'];
 											?>
-											<option value="<?php echo $id_reg ?>">
-												<?php echo $nome_reg ?>
+											<option value="<//?php echo $id_reg ?>">
+												<//?php echo $nome_reg ?>
 											</option>
 
-										<?php }
+										<//?php }
 									} ?>
 								</select>
 							</div>
 
-						</div>
+						</div>-->
 
 
-						<div class="col-md-3">
+						<!--<div class="col-md-3">
 							<div class="mb-3">
 								<label for="exampleFormControlInput1" class="form-label">Estado Cívil</label>
 								<select class="form-control sel2" id="estado" name="estado" style="width:100%;">
@@ -293,19 +293,19 @@ $pagina = 'membros';
 								</select>
 							</div>
 
-						</div>
+						</div>-->
 
 
 
 					</div>
 
 					<div class="row">
-						<div class="col-md-3">
+						<!--<div class="col-md-3">
 							<div class="mb-3">
 								<label for="exampleFormControlInput1" class="form-label">Data Batismo</label>
 								<input type="date" class="form-control" id="data_bat" name="data_bat">
 							</div>
-						</div>
+						</div>-->
 
 
 
