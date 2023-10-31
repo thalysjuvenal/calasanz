@@ -9,7 +9,7 @@ $query = $pdo->query("SELECT * FROM igrejas");
 $res = $query->fetchAll(PDO::FETCH_ASSOC);
 $igrejasCadastradas = @count($res);
 
-$query = $pdo->query("SELECT * FROM pastores");
+$query = $pdo->query("SELECT * FROM coordenadores");
 $res = $query->fetchAll(PDO::FETCH_ASSOC);
 $pastoresCadastrados = @count($res);
 
@@ -77,7 +77,7 @@ $pdo->query("DELETE FROM logs where data < '$data_limpeza'");
 									</div>
 									<div class="col-9 text-end">
 										<h3> <span class="text-dark"><?php echo @$pastoresCadastrados ?></span></h3>
-										<span class="textocinzaescuro">Pastores Cadastrados</span>
+										<span class="textocinzaescuro">Coordenadores Cadastrados</span>
 									</div>
 								</div>
 							</div>
@@ -98,7 +98,7 @@ $pdo->query("DELETE FROM logs where data < '$data_limpeza'");
 									</div>
 									<div class="col-9 text-end">
 										<h3> <span class="text-primary"><?php echo @$membrosSede ?></span></h3>
-										<span class="textocinzaescuro">Membros da Sede</span>
+										<span class="textocinzaescuro">Membros da Matriz</span>
 									</div>
 								</div>
 							</div>

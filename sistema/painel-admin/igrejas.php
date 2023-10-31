@@ -53,7 +53,7 @@ $pagina = 'igrejas';
 					$instagram = $res[$i]['instagram'];
 					$facebook = $res[$i]['facebook'];
 					$descricao = $res[$i]['descricao'];
-					$prebenda = $res[$i]['prebenda'];
+					//$prebenda = $res[$i]['prebenda'];
 
 					$logo_rel = $res[$i]['logo_rel'];
 					$cab_rel = $res[$i]['cab_rel'];
