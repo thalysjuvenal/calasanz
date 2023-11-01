@@ -166,9 +166,27 @@ require_once("deslogar-secretario.php");
 					</div>
 
 					<div class="mb-3">
-						<label for="exampleFormControlInput1" class="form-label">Membro</label>
+						<label for="exampleFormControlInput1" class="form-label">Tesoureiro</label>
 						<select class="form-control sel2" id="membro" name="membro" style="width:100%;">
 							<option value="0">Selecionar Membro</option>
+							<?php
+							$query = $pdo->query("SELECT * FROM usuarios where igreja = '$id_igreja' order by id asc");
+							$res = $query->fetchAll(PDO::FETCH_ASSOC);
+							$total_reg = count($res);
+							if ($total_reg > 0) {
+								for ($i = 0; $i < $total_reg; $i++) {
+									foreach ($res[$i] as $key => $value) {
+									}
+									$nome_reg = $res[$i]['nome'];
+									$cargo = $res[$i]['cargo'];
+									$id_reg = $res[$i]['id'];
+									$nome_cargo = $res_con[0]['nome'];
+									?>
+									<option value="<?php echo $id_reg ?>">
+										<?php echo $nome_reg ?>
+									</option>
+								<?php }
+							} ?>
 						</select>
 					</div>
 
