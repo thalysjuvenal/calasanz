@@ -13,7 +13,7 @@ $query = $pdo->query("SELECT * FROM coordenadores");
 $res = $query->fetchAll(PDO::FETCH_ASSOC);
 $pastoresCadastrados = @count($res);
 
-$query_m = $pdo->query("SELECT * FROM membros where igreja = 1 and ativo = 'Sim'");
+$query_m = $pdo->query("SELECT * FROM membros where igreja = 2 and ativo = 'Sim'");
 $res_m = $query_m->fetchAll(PDO::FETCH_ASSOC);
 $membrosSede = @count($res_m);
 
