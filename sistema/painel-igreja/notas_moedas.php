@@ -103,7 +103,7 @@ require_once("deslogar-secretario.php");
 
 
 <div class="modal fade" id="modalForm" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-	<div class="modal-dialog ">
+	<div class="modal-dialog">
 		<div class="modal-content">
 			<div class="modal-header">
 				<h5 class="modal-title" id="tituloModal"></h5>
@@ -116,8 +116,7 @@ require_once("deslogar-secretario.php");
 						<div class="col-md-6">
 							<div class="mb-3">
 								<label for="exampleFormControlInput1" class="form-label">Valor </label>
-								<input type="text" class="form-control" id="valor" name="valor"
-									placeholder="Valor da Oferta" required>
+								<input type="text" class="form-control" id="valor" name="valor" placeholder="Valor da Oferta" required>
 							</div>
 						</div>
 						<div class="col-md-6">
@@ -128,6 +127,26 @@ require_once("deslogar-secretario.php");
 						</div>
 					</div>
 
+					<div class="row">
+						<div class="col-md-4">
+							<div class="mb-3">
+								<label for="exampleFormControlInput1" class="form-label">Quantidade </label>
+								<input type="text" class="form-control" id="quantidade" name="quantidade" placeholder="Quantidade" required>
+							</div>
+						</div>
+						<div class="col-md-4">
+							<div class="mb-3">
+								<label for="exampleFormControlInput1" class="form-label">Cédula/Moeda </label>
+								<input type="text" class="form-control" id="cedula_moeda" name="cedula_moeda" placeholder="Cédula/Moeda" required>
+							</div>
+						</div>
+						<div class="col-md-4">
+							<div class="mb-3">
+								<label for="exampleFormControlInput1" class="form-label">Dízimo/Oferta </label>
+								<input type="text" class="form-control" id="dizimo_oferta" name="dizimo_oferta" placeholder="Dízimo/Oferta" required>
+							</div>
+						</div>
+					</div>
 
 					<div class="mb-3">
 						<label for="exampleFormControlInput1" class="form-label">Membro</label>
@@ -138,31 +157,23 @@ require_once("deslogar-secretario.php");
 							$res = $query->fetchAll(PDO::FETCH_ASSOC);
 							$total_reg = count($res);
 							if ($total_reg > 0) {
-
 								for ($i = 0; $i < $total_reg; $i++) {
 									foreach ($res[$i] as $key => $value) {
 									}
-
 									$nome_reg = $res[$i]['nome'];
 									$cargo = $res[$i]['cargo'];
 									$id_reg = $res[$i]['id'];
-
 									$query_con = $pdo->query("SELECT * FROM cargos where id = '$cargo'");
 									$res_con = $query_con->fetchAll(PDO::FETCH_ASSOC);
 									$nome_cargo = $res_con[0]['nome'];
-
 									?>
 									<option value="<?php echo $id_reg ?>">
 										<?php echo $nome_reg . ' - ' . $nome_cargo ?>
 									</option>
-
 								<?php }
 							} ?>
 						</select>
-
 					</div>
-
-
 
 					<input type="hidden" id="id" name="id">
 					<input type="hidden" id="igreja" name="igreja" value="<?php echo $id_igreja ?>">
@@ -172,15 +183,13 @@ require_once("deslogar-secretario.php");
 					<div align="center" id="mensagem"></div>
 				</small>
 				<div class="modal-footer">
-					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
-						id="btn-fechar">Fechar</button>
+					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="btn-fechar">Fechar</button>
 					<button type="submit" class="btn btn-primary">Salvar</button>
 				</div>
 			</form>
 		</div>
 	</div>
 </div>
-
 
 
 
