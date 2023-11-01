@@ -41,12 +41,12 @@ require_once("deslogar-secretario.php");
 					$quantidade = $res[$i]['quantidade'];
 					$cedula_moeda = $res[$i]['valorunitario'];
 					$dizimo_oferta = $res[$i]['tipoinfo'];
-					$data = $res[$i]['Data'];
+					$Data = $res[$i]['Data'];
 					$usuario = $res[$i]['usuario'];
 
 					$id = $res[$i]['id'];
 
-					$dataF = implode('/', array_reverse(explode('-', $data)));
+					$dataF = implode('/', array_reverse(explode('-', $Data)));
 					$valorF = number_format($valor, 2, ',', '.');
 
 					$query_con = $pdo->query("SELECT * FROM usuarios where id = '$usuario'");
