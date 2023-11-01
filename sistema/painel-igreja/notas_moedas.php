@@ -150,7 +150,7 @@ require_once("deslogar-secretario.php");
 
 					<div class="mb-3">
 						<label for="exampleFormControlInput1" class="form-label">Membro</label>
-						<select class="form-control sel2" id="membro" name="membro" style="width:100%;">
+						<!--<select class="form-control sel2" id="membro" name="membro" style="width:100%;">
 							<option value="0">Selecionar Membro</option>
 							<?php
 							$query = $pdo->query("SELECT * FROM membros where igreja = '$id_igreja' order by id asc");
@@ -172,7 +172,7 @@ require_once("deslogar-secretario.php");
 									</option>
 								<?php }
 							} ?>
-						</select>
+						</select>-->
 					</div>
 
 					<input type="hidden" id="id" name="id">
