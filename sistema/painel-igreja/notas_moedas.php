@@ -167,9 +167,6 @@ require_once("deslogar-secretario.php");
 
 					<div class="mb-3">
 						<label for="exampleFormControlInput1" class="form-label">Membro</label>
-						<select class="form-control sel2" id="membro" name="membro" style="width:100%;">
-							<option value="0">Selecionar Membro</option>
-						</select>
 					</div>
 
 					<input type="hidden" id="id" name="id">
