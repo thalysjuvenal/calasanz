@@ -113,12 +113,12 @@ require_once("deslogar-secretario.php");
 				<div class="modal-body">
 
 					<div class="row">
-						<div class="col-md-6">
+						<!--<div class="col-md-6">
 							<div class="mb-3">
 								<label for="exampleFormControlInput1" class="form-label">Valor </label>
 								<input type="text" class="form-control" id="valor" name="valor" placeholder="Valor da Oferta" required>
 							</div>
-						</div>
+						</div>-->
 						<div class="col-md-6">
 							<div class="mb-3">
 								<label for="exampleFormControlInput1" class="form-label">Data </label>
