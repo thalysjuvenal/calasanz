@@ -170,7 +170,7 @@ require_once("deslogar-secretario.php");
 						<select class="form-control sel2" id="membro" name="membro" style="width:100%;">
 							<option value="0">Selecionar Membro</option>
 							<?php
-							$query = $pdo->query("SELECT * FROM usuarios where igreja = '$id_igreja' order by id asc");
+							$query = $pdo->query("SELECT * FROM tesoureiros where igreja = '$id_igreja' order by id asc");
 							$res = $query->fetchAll(PDO::FETCH_ASSOC);
 							$total_reg = count($res);
 							if ($total_reg > 0) {
