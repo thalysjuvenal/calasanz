@@ -168,7 +168,7 @@ require_once("deslogar-secretario.php");
 					<div class="mb-3">
 						<label for="exampleFormControlInput1" class="form-label">Tesoureiro</label>
 						<select class="form-control sel2" id="membro" name="membro" style="width:100%;">
-							<option value="0">Selecionar Membro</option>
+							<option value="0">Selecionar Tesoureiro</option>
 							<?php
 							$query = $pdo->query("SELECT * FROM tesoureiros where igreja = '$id_igreja' order by id asc");
 							$res = $query->fetchAll(PDO::FETCH_ASSOC);
