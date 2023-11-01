@@ -5,14 +5,16 @@ $id_usuario = @$_SESSION['id_usuario'];
 
 $pagina = 'notas_moedas';
 
-$valor = $_POST['valor'];
+$valor_unitario = $_POST['valor_unitario'];
+$quantidade = $_POST['quantidade'];
+$dizimo_oferta = $_POST['dizimo_oferta'];
 $membro = $_POST['membro'];
 $data = $_POST['data'];
 $igreja = $_POST['igreja'];
 $id = @$_POST['id'];
+$valor = $valor_unitario * $quantidade;
 
-
-$query_con = $pdo->query("SELECT * FROM membros where id = '$membro'");
+$query_con = $pdo->query("SELECT * FROM tesoureiros where id = '$membro' and igreja = '$igreja'");
 $res_con = $query_con->fetchAll(PDO::FETCH_ASSOC);
 if (count($res_con) > 0) {
 	$nome_membro = $res_con[0]['nome'];
@@ -22,14 +24,14 @@ if (count($res_con) > 0) {
 
 
 if ($id == "" || $id == 0) {
-	$query = $pdo->prepare("INSERT INTO $pagina SET membro = '$membro', valor = :valor, data = '$data', usuario = '$id_usuario', igreja = '$igreja'");
+	$query = $pdo->prepare("INSERT INTO $pagina SET tesoureiro = '$membro', quantidade = '$quantidade', valorunitario = '$valor_unitario', valortotal = :valor, usuario = '$id_usuario', igreja = '$igreja' Data = '$data', tipoinfo = '$dizimo_oferta'");
 
 	$query->bindValue(":valor", "$valor");
 	$query->execute();
 	$ult_id = $pdo->lastInsertId();
 
 	//INSIRO NAS MOVIMENTACOES
-	$pdo->query("INSERT INTO movimentacoes SET tipo = 'Entrada', movimento = 'Oferta', descricao = '$nome_membro', valor = '$valor', data = '$data', usuario = '$id_usuario', id_mov = '$ult_id', igreja = '$igreja'");
+	$pdo->query("INSERT INTO movimentacoes SET tipo = 'Entrada', movimento = 'Contagem', descricao = '$nome_membro', valor = '$valor', data = '$data', usuario = '$id_usuario', id_mov = '$ult_id', igreja = '$igreja', idcontagem = '$id");
 
 } else {
 	require_once("../verificar-tesoureiro.php");
