@@ -178,9 +178,7 @@ require_once("deslogar-secretario.php");
 									foreach ($res[$i] as $key => $value) {
 									}
 									$nome_reg = $res[$i]['nome'];
-									$cargo = $res[$i]['cargo'];
 									$id_reg = $res[$i]['id'];
-									$nome_cargo = $res_con[0]['nome'];
 									?>
 									<option value="<?php echo $id_reg ?>">
 										<?php echo $nome_reg ?>
