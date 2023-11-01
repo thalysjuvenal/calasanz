@@ -132,7 +132,7 @@ require_once("deslogar-secretario.php");
 							<div class="mb-3">
 								<label for="exampleFormControlInput1" class="form-label">Quantidade </label>
 								<input type="number" class="form-control" id="quantidade" name="quantidade"
-									placeholder="Quantidade" required>
+									required>
 								<select name="valor_unitario" required>
 									<option value="0.05">R$ 0.05</option>
 									<option value="0.10">R$ 0.10</option>
