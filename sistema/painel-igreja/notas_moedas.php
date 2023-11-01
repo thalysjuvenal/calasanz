@@ -152,7 +152,7 @@ require_once("deslogar-secretario.php");
 						<label for="exampleFormControlInput1" class="form-label">Membro</label>
 						<!--<select class="form-control sel2" id="membro" name="membro" style="width:100%;">
 							<option value="0">Selecionar Membro</option>
-							<?php
+							<//?php
 							$query = $pdo->query("SELECT * FROM membros where igreja = '$id_igreja' order by id asc");
 							$res = $query->fetchAll(PDO::FETCH_ASSOC);
 							$total_reg = count($res);
@@ -167,10 +167,10 @@ require_once("deslogar-secretario.php");
 									$res_con = $query_con->fetchAll(PDO::FETCH_ASSOC);
 									$nome_cargo = $res_con[0]['nome'];
 									?>
-									<option value="<?php echo $id_reg ?>">
-										<?php echo $nome_reg . ' - ' . $nome_cargo ?>
+									<option value="</?php echo $id_reg ?>">
+										</?php echo $nome_reg . ' - ' . $nome_cargo ?>
 									</option>
-								<?php }
+								</?php }
 							} ?>
 						</select>-->
 					</div>
