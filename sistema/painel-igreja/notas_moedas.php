@@ -131,19 +131,36 @@ require_once("deslogar-secretario.php");
 						<div class="col-md-4">
 							<div class="mb-3">
 								<label for="exampleFormControlInput1" class="form-label">Quantidade </label>
-								<input type="text" class="form-control" id="quantidade" name="quantidade" placeholder="Quantidade" required>
+								<input type="number" class="form-control" id="quantidade" name="quantidade"
+									placeholder="Quantidade" required>
+								<select name="valor_unitario" required>
+									<option value="0.05">R$ 0.05</option>
+									<option value="0.10">R$ 0.10</option>
+									<option value="0.25">R$ 0.25</option>
+									<option value="0.50">R$ 0.50</option>
+									<option value="1.00">R$ 1.00</option>
+									<option value="2.00">R$ 2.00</option>
+									<option value="5.00">R$ 5.00</option>
+									<option value="10.00">R$ 10.00</option>
+									<option value="20.00">R$ 20.00</option>
+									<option value="50.00">R$ 50.00</option>
+									<option value="100.00">R$ 100.00</option>
+									<option value="200.00">R$ 200.00</option>
+								</select><br>
 							</div>
 						</div>
 						<div class="col-md-4">
 							<div class="mb-3">
 								<label for="exampleFormControlInput1" class="form-label">Cédula/Moeda </label>
-								<input type="text" class="form-control" id="cedula_moeda" name="cedula_moeda" placeholder="Cédula/Moeda" required>
+								<input type="text" class="form-control" id="cedula_moeda" name="cedula_moeda"
+									placeholder="Cédula/Moeda" required>
 							</div>
 						</div>
 						<div class="col-md-4">
 							<div class="mb-3">
 								<label for="exampleFormControlInput1" class="form-label">Dízimo/Oferta </label>
-								<input type="text" class="form-control" id="dizimo_oferta" name="dizimo_oferta" placeholder="Dízimo/Oferta" required>
+								<input type="text" class="form-control" id="dizimo_oferta" name="dizimo_oferta"
+									placeholder="Dízimo/Oferta" required>
 							</div>
 						</div>
 					</div>
@@ -183,7 +200,8 @@ require_once("deslogar-secretario.php");
 					<div align="center" id="mensagem"></div>
 				</small>
 				<div class="modal-footer">
-					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="btn-fechar">Fechar</button>
+					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
+						id="btn-fechar">Fechar</button>
 					<button type="submit" class="btn btn-primary">Salvar</button>
 				</div>
 			</form>
