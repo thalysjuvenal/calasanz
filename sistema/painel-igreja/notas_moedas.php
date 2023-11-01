@@ -148,7 +148,7 @@ require_once("deslogar-secretario.php");
 						</div>
 					</div>
 
-					<!--<div class="mb-3">
+					<div class="mb-3">
 						<label for="exampleFormControlInput1" class="form-label">Membro</label>
 						<select class="form-control sel2" id="membro" name="membro" style="width:100%;">
 							<option value="0">Selecionar Membro</option>
@@ -173,7 +173,7 @@ require_once("deslogar-secretario.php");
 								<?php }
 							} ?>
 						</select>
-					</div>-->
+					</div>
 
 					<input type="hidden" id="id" name="id">
 					<input type="hidden" id="igreja" name="igreja" value="<?php echo $id_igreja ?>">
