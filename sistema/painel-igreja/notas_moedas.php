@@ -72,6 +72,9 @@ require_once("deslogar-secretario.php");
 							<?php echo $cedula_moeda ?>
 						</td>
 						<td class="">
+							<?php echo $dizimo_oferta ?>
+						</td>
+						<td class="">
 							<?php echo $dataF ?>
 						</td>
 						<td class="esc">
