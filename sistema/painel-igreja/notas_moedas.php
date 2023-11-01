@@ -41,7 +41,7 @@ require_once("deslogar-secretario.php");
 					$quantidade = $res[$i]['quantidade'];
 					$cedula_moeda = $res[$i]['valorunitario'];
 					$dizimo_oferta = $res[$i]['tipoinfo'];
-					$data = $res[$i]['data'];
+					$data = $res[$i]['Data'];
 					$usuario = $res[$i]['usuario'];
 
 					$id = $res[$i]['id'];
