@@ -132,8 +132,13 @@ require_once("deslogar-secretario.php");
 							<div class="mb-3">
 								<label for="exampleFormControlInput1" class="form-label">Quantidade </label>
 								<input type="number" class="form-control" id="quantidade" name="quantidade"
-									required>
-								<select name="valor_unitario" required>
+									placeholder="Quantidade" required>
+							</div>
+						</div>
+						<div class="col-md-4">
+							<div class="mb-3">
+								<label for="exampleFormControlInput1" class="form-label">Cédula/Moeda</label>
+								<select name="valor_unitario" class="form-select" required>
 									<option value="0.05">R$ 0.05</option>
 									<option value="0.10">R$ 0.10</option>
 									<option value="0.25">R$ 0.25</option>
@@ -146,14 +151,7 @@ require_once("deslogar-secretario.php");
 									<option value="50.00">R$ 50.00</option>
 									<option value="100.00">R$ 100.00</option>
 									<option value="200.00">R$ 200.00</option>
-								</select><br>
-							</div>
-						</div>
-						<div class="col-md-4">
-							<div class="mb-3">
-								<label for="exampleFormControlInput1" class="form-label">Cédula/Moeda </label>
-								<input type="text" class="form-control" id="cedula_moeda" name="cedula_moeda"
-									placeholder="Cédula/Moeda" required>
+								</select>
 							</div>
 						</div>
 						<div class="col-md-4">
