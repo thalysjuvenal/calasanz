@@ -84,7 +84,7 @@ require_once("deslogar-secretario.php");
 						<td>
 
 							<a href="#"
-								onclick="editar('<?php echo $id ?>', '<?php echo $membro ?>', '<?php echo $valor ?>', '<?php echo $data ?>', '<?php echo $usuario ?>')"
+								onclick="editar('<?php echo $id ?>', '<?php echo $quantidade ?>', '<?php echo $cedula_moeda ?>', '<?php echo $dizimo_oferta ?>', '<?php echo $usuario ?>')"
 								title="Editar Registro"> <i class="bi bi-pencil-square text-primary"></i> </a>
 
 							<a href="#" onclick="excluir('<?php echo $id ?>' , '<?php echo $valor ?>')"
