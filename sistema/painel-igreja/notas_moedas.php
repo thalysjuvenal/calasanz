@@ -1,12 +1,12 @@
 <?php 
 require_once("../conexao.php");
 require_once("verificar.php");
-$pagina = 'ofertas';
+$pagina = 'notas_moedas';
 require_once("deslogar-secretario.php");
 ?>
 
 <div class="col-md-12 my-3">
-	<a href="#" onclick="inserir()" type="button" class="btn btn-dark btn-sm">Nova Oferta</a>
+	<a href="#" onclick="inserir()" type="button" class="btn btn-dark btn-sm">Inserir quantidades</a>
 </div>
 
 <div class="tabela bg-light">

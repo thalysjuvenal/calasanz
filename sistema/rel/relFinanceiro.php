@@ -1,24 +1,21 @@
-<?php 
+<?php
 require_once("../conexao.php");
-
 $igreja = $_POST['igreja'];
-if(isset($_POST['tipo'])) {
-$tipo = @$_POST['tipo'];
-}else{
-$tipo = "";
+if (isset($_POST['tipo'])) {
+	$tipo = @$_POST['tipo'];
+} else {
+	$tipo = "";
 }
 $dataInicial = $_POST['dataInicial'];
 $dataFinal = $_POST['dataFinal'];
 $movimento = $_POST['movimento'];
 
 //ALIMENTAR OS DADOS NO RELATÓRIO
-$html = file_get_contents($url_sistema."rel/relFinanceiroHtml.php?igreja=$igreja&tipo=$tipo&movimento=$movimento&dataInicial=$dataInicial&dataFinal=$dataFinal");
-
-if($relatorio_pdf != 'Sim'){
+$html = file_get_contents($url_sistema . "rel/relFinanceiroHtml.php?igreja=$igreja&tipo=$tipo&movimento=$movimento&dataInicial=$dataInicial&dataFinal=$dataFinal");
+if ($relatorio_pdf != 'Sim') {
 	echo $html;
 	exit();
 }
-
 //CARREGAR DOMPDF
 require_once '../dompdf/autoload.inc.php';
 use Dompdf\Dompdf;
@@ -44,8 +41,8 @@ $pdf->render();
 
 //NOMEAR O PDF GERADO
 $pdf->stream(
-'financeiro.pdf',
-array("Attachment" => false)
+	'financeiro.pdf',
+	array("Attachment" => false)
 );
 
- ?>
+?>
