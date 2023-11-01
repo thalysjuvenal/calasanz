@@ -158,7 +158,7 @@ require_once("deslogar-secretario.php");
 							<div class="mb-3">
 								<label for="exampleFormControlInput1" class="form-label">Dízimo/Oferta</label>
 								<select name="dizimo_oferta" class="form-select" id="dizimo_oferta" required>
-									<option value="Dízimo">Dízimo</option>
+									<option value="Dizimo">Dízimo</option>
 									<option value="Oferta">Oferta</option>
 								</select>
 							</div>
