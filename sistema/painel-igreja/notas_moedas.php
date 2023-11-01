@@ -28,7 +28,7 @@ require_once("deslogar-secretario.php");
 					<th>Dízimo / Oferta</th>
 					<th class="esc">Data</th>
 					<th class="esc">Tesoureiro</th>
-					<th>Ações</th>
+					<!--<th>Ações</th>-->
 				</tr>
 			</thead>
 			<tbody>
@@ -81,7 +81,7 @@ require_once("deslogar-secretario.php");
 							<?php echo $usuario_cad . ' <small>(' . $nivel_usuario . ')</small>' ?>
 						</td>
 
-						<td>
+						<!--<td>
 
 							<a href="#"
 								onclick="editar('<?php echo $id ?>', '<?php echo $membro ?>', '<?php echo $valor ?>', '<?php echo $data ?>', '<?php echo $usuario ?>')"
@@ -91,7 +91,7 @@ require_once("deslogar-secretario.php");
 								title="Excluir Registro"> <i class="bi bi-trash text-danger"></i> </a>
 
 
-						</td>
+						</td>-->
 					</tr>
 				<?php } ?>
 			</tbody>
