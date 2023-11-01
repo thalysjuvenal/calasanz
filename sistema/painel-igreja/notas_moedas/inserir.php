@@ -24,14 +24,14 @@ if (count($res_con) > 0) {
 
 
 if ($id == "" || $id == 0) {
-	$query = $pdo->prepare("INSERT INTO $pagina SET tesoureiro = '$membro', quantidade = '$quantidade', valorunitario = '$valor_unitario', valortotal = :valor, usuario = '$id_usuario', igreja = '$igreja' Data = '$data', tipoinfo = '$dizimo_oferta'");
+	$query = $pdo->prepare("INSERT INTO $pagina SET tesoureiro = '$membro', quantidade = '$quantidade', valorunitario = '$valor_unitario', valortotal = '$valor', usuario = '$id_usuario', igreja = '$igreja', data = '$data', tipoinfo = '$dizimo_oferta'");
 
 	$query->bindValue(":valor", "$valor");
 	$query->execute();
 	$ult_id = $pdo->lastInsertId();
 
 	//INSIRO NAS MOVIMENTACOES
-	$pdo->query("INSERT INTO movimentacoes SET tipo = 'Entrada', movimento = 'Contagem', descricao = '$nome_membro', valor = '$valor', data = '$data', usuario = '$id_usuario', id_mov = '$ult_id', igreja = '$igreja', idcontagem = '$id");
+	$pdo->query("INSERT INTO movimentacoes SET tipo = 'Entrada', movimento = 'Contagem', descricao = '$nome_membro', valor = '$valor', data = '$data', usuario = '$id_usuario', id_mov = '$ult_id', igreja = '$igreja'");
 
 } else {
 	require_once("../verificar-tesoureiro.php");
