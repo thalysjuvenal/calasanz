@@ -31,7 +31,7 @@ if ($id == "" || $id == 0) {
 	$ult_id = $pdo->lastInsertId();
 
 	//INSIRO NAS MOVIMENTACOES
-	$pdo->query("INSERT INTO movimentacoes SET tipo = 'Entrada', movimento = 'Contagem', descricao = '$nome_membro', valor = '$valor', data = '$data', usuario = '$id_usuario', id_mov = '$ult_id', igreja = '$igreja'");
+	$pdo->query("INSERT INTO movimentacoes SET tipo = 'Entrada', movimento = 'Contagem', descricao = '$nome_membro', valor = :valor, data = '$data', usuario = '$id_usuario', id_mov = '$ult_id', igreja = '$igreja'");
 
 } else {
 	require_once("../verificar-tesoureiro.php");

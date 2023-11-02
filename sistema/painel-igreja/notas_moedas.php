@@ -131,7 +131,7 @@ require_once("deslogar-secretario.php");
 						<div class="col-md-4">
 							<div class="mb-3">
 								<label for="exampleFormControlInput1" class="form-label">Quantidade </label>
-								<input type="number" class="form-control" id="quantidade" name="quantidade"
+								<input type="text" class="form-control" id="quantidade" name="quantidade"
 									placeholder="Quantidade" required>
 							</div>
 						</div>
