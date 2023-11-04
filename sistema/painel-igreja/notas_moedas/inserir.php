@@ -3,7 +3,7 @@ require_once("../../conexao.php");
 @session_start();
 $id_usuario = @$_SESSION['id_usuario'];
 
-$pagina = 'ofertas_missa';
+$pagina = 'notasmoedas';
 
 $valor = $_POST['valor'];
 $membro = $_POST['membro'];
