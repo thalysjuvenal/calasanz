@@ -41,8 +41,7 @@ require_once("deslogar-secretario.php");
 					$quantidade = $res[$i]['quantidade'];
 					$cedula_moeda = $res[$i]['valorunitario'];
 					$dizimo_oferta = $res[$i]['tipoinfo'];
-					$data = $res[$i]['data'];
-					$membro = $res[$i]['membro'];
+					$data = $res[$i]['Data'];
 					$usuario = $res[$i]['usuario'];
 
 					$id = $res[$i]['id'];
@@ -68,7 +67,13 @@ require_once("deslogar-secretario.php");
 							<?php echo $valorF ?>
 						</td>
 						<td class="esc">
-							<?php echo $membro ?>
+							<?php echo $quantidade ?>
+						</td>
+						<td class="">
+							<?php echo $cedula_moeda ?>
+						</td>
+						<td class="">
+							<?php echo $dizimo_oferta ?>
 						</td>
 						<td class="">
 							<?php echo $dataF ?>
@@ -81,10 +86,10 @@ require_once("deslogar-secretario.php");
 
 							<a href="#"
 								onclick="editar('<?php echo $id ?>', '<?php echo $membro ?>', '<?php echo $valor ?>', '<?php echo $data ?>', '<?php echo $usuario ?>')"
-								title="Editar Registro"> <i class="bi bi-pencil-square text-primary"></i> </a>
+								title="Editar Contagem"> <i class="bi bi-pencil-square text-primary"></i> </a>
 
 							<a href="#" onclick="excluir('<?php echo $id ?>' , '<?php echo $valor ?>')"
-								title="Excluir Registro"> <i class="bi bi-trash text-danger"></i> </a>
+								title="Excluir Contagem"> <i class="bi bi-trash text-danger"></i> </a>
 
 
 						</td>
